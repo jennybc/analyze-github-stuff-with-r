@@ -1,0 +1,683 @@
+number,id,title,state,user,pr_files
+712,52031638,Spelling/grammar mistake,open,picarus,Environments.rmd
+711,50352024,Minor formatting fixes on Amazon book link,closed,MaxGhenis,_layouts/default.html
+710,49069064,"Fixes #697, the garbled exercise involving plyr::.",closed,jennybc,Exceptions-Debugging.rmd
+709,48679928,I think this should be 99,closed,xiaofeiyangyang,book/tex/Functional-programming.tex
+707,48337115,Not the same results from R and the book,closed,gumeo,Functions.rmd
+706,48164230,q here is undefined,open,peterhurford,Profiling.rmd
+705,47041124,"custom_stop, not customStop",open,mbojan,Exceptions-Debugging.rmd
+704,45835089,inspected > inspector,open,LiNk-NY,S4.rmd
+703,45334267,Add Code Highlighting,open,zachcp,S4.rmd
+701,43894704,Change wording of reference to previous sentence,open,FvD,Style.rmd
+700,43889994,Changed example to check if log(x) is possible,open,FvD,Style.rmd
+699,43532056,fix amazon links in Profiling.rmd,closed,nignatiadis,Profiling.rmd
+696,41744880,more specific,closed,isomorphisms,Computing-on-the-language.rmd
+695,41639547,Update Function-operators.rmd,open,yportne,Function-operators.rmd
+692,40287472,Update Performance.rmd,open,quantbo,Performance.rmd
+690,38716063,Typo. enviroment to environment,closed,Swarchal,Environments.tex
+686,36961687,Adding missing backtick.,closed,mikekaminsky,Computing-on-the-language.rmd
+685,36955139,Update OO-essentials.rmd,closed,DamienFoucard,OO-essentials.rmd
+684,36511013,Update Profiling.rmd,open,carey1024,Profiling.rmd
+682,36087231,Made source of `subs()` clear.,closed,iangow,Computing-on-the-language.rmd
+680,35006536,Install Rexamine/stringi from GitHub,closed,wibeasley,.travis.yml
+679,34863994,Fix typo,closed,gokceneraslan,Subsetting.rmd
+678,34763140,Update memory.rmd,closed,JMHay,memory.rmd
+677,34763091,method name <-> class name,closed,gezakiss7,OO-essentials.rmd
+676,34652430,edit Introduction.rmd,closed,swihart,book/tex/Introduction.tex
+675,34586571,"Introduction:  defined IDE, typo-fix, added my contributor github handle",closed,swihart,book/tex/Introduction.tex
+674,34457658,Update OO-essentials.rmd,open,eipi10,OO-essentials.rmd
+673,34456991,Update Environments.rmd,open,eipi10,Environments.rmd
+671,34111329,names() can return NA,open,gezakiss7,Data-structures.rmd
+670,33837115,Variable Name Change,open,pankajpansari,Data-structures.rmd
+669,33596995,Change focussed to focused,closed,aqsmith08,Introduction.rmd
+667,30569621,Fix a typo,closed,pavel-vodrazka,Functional-programming.rmd
+666,29896218,Inserted missing word,closed,winterschlaefer,Functionals.rmd
+665,29237617,fixed link to formatR,closed,ellisvalentiner,Style.rmd
+664,28908149,Fixed typo,closed,winterschlaefer,Environments.rmd
+663,28839795,Caught a typo,closed,knausb,Rcpp.rmd
+662,28753976,Update Environments.rmd,closed,kirillseva,Environments.rmd
+661,28752819,Update Environments.rmd,closed,kirillseva,Environments.rmd
+658,28174187,typo related to previous,closed,szilard,Functions.rmd
+657,28174042,"typo (getwd, not setwd)",closed,szilard,Functions.rmd
+656,27919572,Update Data-structures.rmd,closed,winterschlaefer,Data-structures.rmd
+655,27806685,Fixed typo,closed,seaaan,Environments.rmd
+652,27530642,Update Performance.rmd,open,JoeVoelkel,Performance.rmd
+651,27390919,Fixed minor typo,closed,seaaan,index.rmd
+650,27369303,Update dsl.rmd,closed,JoeVoelkel,dsl.rmd
+649,27303903,Update beyond-exception-handling.rmd,open,mbrmbr,beyond-exception-handling.rmd
+648,27175055,fix duplicate phrase,closed,daattali,memory.rmd
+647,27156938,small bugfixes in beyond-exception-handling.rmd,closed,Mullefa,beyond-exception-handling.rmd
+645,27117190,Make navigation width responsive to screen width,closed,daattali,www/highlight.css
+643,26978287,fix typo,closed,robertzk,memory.rmd
+642,26909476,Update Function-operators.rmd,open,JoeVoelkel,Function-operators.rmd
+641,26790167,Fixing a typo: lapply -> sapply,closed,dichika,Functions.rmd
+639,26738886,"fix tiny typo: ""an new"" -> ""a new""",closed,daattali,OO-essentials.rmd
+638,26732600,Update Functionals.rmd,closed,davechilders,Functionals.rmd
+637,26607969,"Typos and small fixes in ""Functions"" chapter",closed,daattali,Functions.rmd
+636,26592762,set seed before sampling for exact reproduciblity,closed,daattali,Subsetting.rmd
+635,26035831,Update Functions.rmd,open,mbrmbr,Functions.rmd
+633,25925829,Update Subsetting.rmd,closed,mbrmbr,Subsetting.rmd
+632,25910503,Update Data-structures.rmd,closed,mbrmbr,Data-structures.rmd
+631,25723517,Update Subsetting.rmd,closed,yuchouchen,Subsetting.rmd
+630,25644769,"typo ""first time its run"" -> ""first time it's run""",closed,daattali,Environments.rmd
+629,25333763,Update Data-structures.rmd,closed,earino,Data-structures.rmd
+628,25135528,Update Data-structures.rmd,closed,yuchouchen,Data-structures.rmd
+626,24747421,mem_changed() should be mem_change(),closed,HenrikBengtsson,memory.rmd
+624,24055265,Update C-interface.rmd,closed,HenrikBengtsson,C-interface.rmd
+623,23737197,Update Introduction.rmd. My typo!,closed,michaelmikebuckley,Introduction.rmd
+622,23726333,TYPO: asLogical() takes LGLSXP (was INTSXP),closed,HenrikBengtsson,C-interface.rmd
+621,23657637,"Update Introduction.rmd. Added section labels - ""{#colophon}"" etc.",closed,michaelmikebuckley,Introduction.rmd
+620,23128079,Update C-interface.rmd,closed,michaelmikebuckley,C-interface.rmd
+619,23011541,Fixing a typo,closed,polmath,Functions.rmd
+618,22889571,fixed typos,closed,perryjer1,Functionals.rmd
+617,22816959,fix typos,closed,perryjer1,Exceptions-Debugging.rmd
+616,22732573,Update OO-essentials.rmd,closed,perryjer1,OO-essentials.rmd
+615,22686511,Update Expressions.rmd,closed,michaelmikebuckley,Expressions.rmd
+614,22635445,Fix a missed Common Lisp to R substitution,closed,rzarev,beyond-exception-handling.rmd
+611,22467869,"""assigning"" replaces ""assuming""",open,MichaelMBishop,Data-structures.rmd
+610,22427563,Functions: Fix variable name in the first quiz question,closed,gokceneraslan,Functions.rmd
+609,22149570,Update Subsetting.rmd,open,matthieugomez,Subsetting.rmd
+608,21622315,Update Functionals.rmd,closed,michaelmikebuckley,Functionals.rmd
+607,21592074,"Fix ""Evaluating..."" PDF link",closed,Welliton309,Performance.rmd
+606,21222813,Missing negation.,closed,kasterma,S4.rmd
+605,20886965,typo,closed,gr650,Introduction.rmd
+604,20886494,typo?,closed,gr650,Data-structures.rmd
+603,20882991,typo fixed,closed,gr650,Expressions.rmd
+602,20671816,"""from a list"" instead of ""to a list""",closed,Ironholds,book/tex/Environments.tex
+600,20478058,wording,open,isomorphisms,memory.rmd
+599,20433379,"What's ""it""?",open,isomorphisms,memory.rmd
+596,20276644,"Fix typos in ""Functional Programming""",closed,cubranic,Functional-programming.rmd
+595,20273941,change label to match chapter title 'expressions',closed,rrunner,Computing-on-the-language.rmd
+595,20273941,change label to match chapter title 'expressions',closed,rrunner,Expressions.rmd
+595,20273941,change label to match chapter title 'expressions',closed,rrunner,Function-operators.rmd
+595,20273941,change label to match chapter title 'expressions',closed,rrunner,Functions.rmd
+595,20273941,change label to match chapter title 'expressions',closed,rrunner,book/tex/Computing-on-the-language.tex
+595,20273941,change label to match chapter title 'expressions',closed,rrunner,book/tex/Expressions.tex
+595,20273941,change label to match chapter title 'expressions',closed,rrunner,book/tex/Function-operators.tex
+595,20273941,change label to match chapter title 'expressions',closed,rrunner,book/tex/Functions.tex
+594,20224635,rename label #metaprogramming to #expressions to match title,closed,rrunner,Computing-on-the-language.rmd
+594,20224635,rename label #metaprogramming to #expressions to match title,closed,rrunner,Expressions.rmd
+594,20224635,rename label #metaprogramming to #expressions to match title,closed,rrunner,Function-operators.rmd
+594,20224635,rename label #metaprogramming to #expressions to match title,closed,rrunner,Functions.rmd
+593,20208585,Fixing sentence,open,Noshgul,Computing-on-the-language.rmd
+592,20000934,Fixing a typo,open,grettke,Functional-programming.rmd
+591,19867203,Small edit to Introduction.Rmd,closed,jdblischak,Introduction.rmd
+590,19862889,Update Functions.rmd,open,zross,Functions.rmd
+589,19682563,Update Environments.rmd,closed,stevencarlislewalker,Environments.rmd
+588,19673311,Some unexpected behavior I tested in R,open,LaDilettante,Subsetting.rmd
+587,19603449,Update Function-operators.rmd,closed,rrunner,Function-operators.rmd
+586,19574187,Fixing Typos,closed,bklamer,C-interface.rmd
+585,19570255,Fixing Typos,closed,bklamer,book/advanced-r.tex
+584,19569783,Fixing Typos,closed,bklamer,extras/redirects.R
+583,19569010,Update Expressions.rmd,closed,rrunner,Expressions.rmd
+582,19568867,Dead link due to new URL for R packages book,closed,rrunner,Exceptions-Debugging.rmd
+581,19562441,Update Environments.rmd,closed,rrunner,Environments.rmd
+580,19347712,Update Subsetting.rmd,closed,rrunner,Subsetting.rmd
+579,19346979,Update Subsetting.rmd,closed,rrunner,Subsetting.rmd
+578,19346785,Update Subsetting.rmd,closed,rrunner,Subsetting.rmd
+577,19225641,Update Documenting-functions.rmd,closed,rrunner,Documenting-functions.rmd
+576,19216970,Update Documenting-functions.rmd,closed,rrunner,Documenting-functions.rmd
+575,19215908,Update Documenting-packages.rmd,closed,rrunner,Documenting-packages.rmd
+574,19214828,Update C-interface.rmd,closed,rrunner,C-interface.rmd
+573,19214726,Update Rcpp.rmd,closed,rrunner,Rcpp.rmd
+572,19175700,Fixed grammar mistake in Introduction.Rmd,closed,lianos,Introduction.rmd
+571,18768597,May not return value in this else-if branch,closed,renkun-ken,Expressions.rmd
+570,18753731,Update Data-structures.rmd,closed,patr1ckm,Data-structures.rmd
+569,18753601,Update Data-structures.rmd,closed,patr1ckm,Data-structures.rmd
+568,18620373,Update Function-operators.rmd,closed,rrunner,Function-operators.rmd
+567,18592945,Update Functionals.rmd,closed,zross,Functionals.rmd
+566,18425687,Update Data-structures.rmd,closed,svigneau,Data-structures.rmd
+565,18418901,"fixed typo at line 730, from 'solve' to 'solving'",closed,sarunasmerkliopas,Environments.rmd
+564,18322471,Update Functionals.rmd,closed,rrunner,Functionals.rmd
+563,18310595,Update contribute.rmd,open,andrewpbray,contribute.rmd
+562,18309862,Update Data-structures.rmd,closed,andrewpbray,Data-structures.rmd
+561,18268331,Update Introduction.rmd,closed,cBournhonesque,Introduction.rmd
+560,18258319,Fixed typo,closed,svigneau,Data-structures.rmd
+559,18258253,Update Data-structures.rmd,closed,svigneau,Data-structures.rmd
+558,18258214,Fixed typo,closed,svigneau,Data-structures.rmd
+557,18251552,Update Data-structures.rmd,closed,svigneau,Data-structures.rmd
+556,18247731,Clarified sentence,closed,svigneau,Data-structures.rmd
+555,18246272,Fixed typo,closed,svigneau,Data-structures.rmd
+554,18245695,Fixed typo,closed,svigneau,Data-structures.rmd
+553,18235804,Fixed typo.,closed,svigneau,Data-structures.rmd
+552,18168871,case sensitive,closed,ajdamico,Style.rmd
+551,18168478,sorry if the omission was intentional,closed,ajdamico,_layouts/default.html
+550,18080297,fix typos,closed,jennybc,Data-structures.rmd
+549,18020442,Minor typos corrected in Data structures,closed,Robinlovelace,Data-structures.rmd
+548,18013410,typo correction and a small improvement to Environments chapter,closed,jullybobble,Environments.rmd
+547,17911004,Fixed typo.,closed,adletaw,Data-structures.rmd
+546,17847978,Update Data-structures.rmd,closed,Lawrence-Liu,Data-structures.rmd
+545,17682372,Update S4.rmd,open,setempler,S4.rmd
+544,17622442,Update Environments.rmd,closed,joseph-rickert,Environments.rmd
+543,17596097,vignettes should now be in vignettes/,closed,mikelove,Package-basics.rmd
+542,17559690,fixing typos,closed,TobiasRockel,Data-structures.rmd
+541,17556164,Minor Sentence Correction.,closed,nilesh-patil,Subsetting.rmd
+540,17507556,Update Subsetting.rmd,closed,rdinter,Subsetting.rmd
+539,17507191,Update Subsetting.rmd,closed,rdinter,Subsetting.rmd
+538,17492473,Minor sentence correction.,closed,nilesh-patil,Subsetting.rmd
+537,17484065,Update Data-structures.rmd,closed,Holzhauer,Data-structures.rmd
+536,17340545,Update Documenting-functions.rmd,closed,alko989,Documenting-functions.rmd
+535,17278342,Update Subsetting.rmd,closed,johnfrombluff,Subsetting.rmd
+534,17194664,"Remove an extra ""for""",closed,jomuller,Namespaces.rmd
+533,17155225,Small typo,closed,ncarchedi,Functionals.rmd
+532,17116758,typo: lazinesss -> laziness,closed,contravariant,Function-operators.rmd
+531,17077800,Update Computing-on-the-language.rmd,closed,zackthedecoder,Computing-on-the-language.rmd
+530,16994242,Update Data-structures.rmd,closed,kasterma,Data-structures.rmd
+529,16969358,Minor grammatical typo in memory.rmd,closed,clarkfitzg,memory.rmd
+528,16843116,Small grammatical changes,closed,binarybana,Subsetting.rmd
+527,16775034,typo: You'll should -> You should,closed,ghost,Functional-programming.rmd
+526,16708546,Update Subsetting.rmd,closed,ajdamico,Subsetting.rmd
+525,16708367,Update Subsetting.rmd,closed,ajdamico,Subsetting.rmd
+524,16675975,Update Data-structures.rmd,closed,freezby,Data-structures.rmd
+523,16574485,"Added missing ""no"" to the statement about scalars.",closed,otepoti,Data-structures.rmd
+522,16571735,Just spelling/punctuation,closed,SplashDance,Data-structures.rmd
+522,16571735,Just spelling/punctuation,closed,SplashDance,Subsetting.rmd
+521,16569357,Update OO-essentials.rmd,closed,whitwort,OO-essentials.rmd
+520,16515404,removed reference to roxygen3,closed,dlebauer,Documenting-functions.rmd
+519,16466737,Update Introduction.rmd,closed,jvcasill,Introduction.rmd
+518,16452477,g() or i()?,closed,sbgraves237,Environments.rmd
+517,16443596,description does not match diagram,closed,sbgraves237,Environments.rmd
+516,16442460,lib & require,closed,sbgraves237,Environments.rmd
+515,16406232,Update Functions.rmd,closed,ilanman,Functions.rmd
+514,16405376,Update Functions.rmd,closed,ilanman,Functions.rmd
+513,16404100,Update Environments.rmd,closed,eddelbuettel,Environments.rmd
+512,16404040,Update Environments.rmd,closed,eddelbuettel,Environments.rmd
+511,16403411,Fixing small typos and changing some wording,closed,amoeba,Environments.rmd
+510,16376103,"added ""begin"" to ""can't with _"" for ""binding names to values""",closed,rmflight,Environments.rmd
+509,16367883,Update Environments.rmd,closed,jastingo,Environments.rmd
+507,16328004,typo,closed,hmalmedal,Profiling.rmd
+506,16222479,"Fix typo, s/interger/integer",closed,andrewla,C-interface.rmd
+505,16196663,Update Data-structures.rmd,closed,woodvi,Data-structures.rmd
+503,16061794,Fixing a typo,closed,alexvoronov,Functions.rmd
+502,16038116,Update memory.rmd,closed,hassaad85,memory.rmd
+501,16037816,Update Git.rmd,closed,hassaad85,Git.rmd
+500,16026118,C-interface: pairlists ...,closed,lindbrook,C-interface.rmd
+499,16014892,C-interface: Creating and modifying vectors,closed,lindbrook,C-interface.rmd
+498,15927745,missing word,closed,ste-fan,Philosophy.rmd
+497,15857809,"C-interface: Intro, Calling … and Data structures",closed,lindbrook,C-interface.rmd
+496,15853352,Rcpp: Case studies ...,open,lindbrook,Rcpp.rmd
+495,15767128,Update C-interface.rmd,closed,swnydick,C-interface.rmd
+494,15766894,Update C-interface.rmd,closed,swnydick,C-interface.rmd
+493,15762500,Update C-interface.rmd,closed,richierocks,C-interface.rmd
+492,15750260,Rcpp: STL,open,lindbrook,Rcpp.rmd
+491,15738998,Rcpp Sugar,closed,lindbrook,Rcpp.rmd
+490,15734890,Rcpp: missing values,closed,lindbrook,Rcpp.rmd
+489,15727943,"little change to pdistC, to make it closer to pdistR",closed,lbraglia,Rcpp.rmd
+488,15709691,Update Profiling.rmd,closed,swnydick,Profiling.rmd
+487,15708439,Update Profiling.rmd,closed,swnydick,Profiling.rmd
+486,15707565,Update Profiling.rmd,closed,swnydick,Profiling.rmd
+485,15707307,Update Profiling.rmd,closed,swnydick,Profiling.rmd
+484,15495684,Fix typos,closed,ajdm,Data-structures.rmd
+483,15474902,Memory: gc(),closed,lindbrook,memory.rmd
+482,15474820,Profiling: matrix algebra,closed,lindbrook,Profiling.rmd
+481,15474228,Update Exceptions-Debugging.rmd,closed,sbgraves237,Exceptions-Debugging.rmd
+480,15420194,Rcpp classes and methods,closed,lindbrook,Rcpp.rmd
+479,15371097,Rcpp:Getting started & Getting started with C++,closed,lindbrook,Rcpp.rmd
+478,15327140,Rcpp intro,closed,lindbrook,Rcpp.rmd
+477,15311369,Some minor changes + PROTECTion fix,closed,kevinushey,C-interface.rmd
+476,15298676,Update Functions.rmd,closed,twjacobs,Functions.rmd
+475,15249284,Clarify back-and-forth sentence,closed,Ironholds,Functions.rmd
+474,15246797,Update Function-operators.rmd,closed,swnydick,Function-operators.rmd
+473,15234521,Update Subsetting.rmd,closed,twjacobs,Subsetting.rmd
+472,15210686,"avoid duplication of ""cutting edge tools"".",closed,Ironholds,Introduction.rmd
+471,15208964,if <- in,closed,Ironholds,Formulas.rmd
+470,15204868,Profiling: Do as little as possible ...,closed,lindbrook,Profiling.rmd
+469,15199523,Profiling: Improving performance,closed,lindbrook,Profiling.rmd
+468,15153419,Profiling: Prerequisites & Measuring performance,closed,lindbrook,Profiling.rmd
+467,15149886,reading source code (typos),closed,lindbrook,Introduction.rmd
+466,15140326,reading source code,closed,lindbrook,Introduction.rmd
+465,15089390,Update Introduction.rmd,closed,twjacobs,Introduction.rmd
+464,14969497,Add the requirement for Suggests: testthat,closed,juancentro,Testing.rmd
+463,14941164,Add new best practice for R CMD CHECK integration,closed,juancentro,Testing.rmd
+462,14927068,Update Rcpp.rmd,closed,eriqande,Rcpp.rmd
+461,14888994,Update Function-operators.rmd,closed,sailingwave,Function-operators.rmd
+460,14827965,Data structures: TRUE and FALSE > T & F ?,closed,lindbrook,Data-structures.rmd
+459,14742660,Update OO-essentials.rmd,closed,sailingwave,OO-essentials.rmd
+458,14687828,Memory: lineprof & modification in place,closed,lindbrook,memory.rmd
+457,14682365,L suffix,closed,lindbrook,Data-structures.rmd
+456,14681865,Memory: Total memory use & Garbage Collection,closed,lindbrook,memory.rmd
+455,14638444,Memory: Intro & object.size(),closed,lindbrook,memory.rmd
+454,14619264,Update Documenting-functions.rmd,closed,ctbrown,Documenting-functions.rmd
+453,14424642,typo,closed,Bozh,Functions.rmd
+452,14301272,Fixed a typo and clarified a couple of examples,closed,iaindillingham,Data-structures.rmd
+451,14188186,"Performance: ""implementation"" and ""alternatives""",closed,lindbrook,Performance.rmd
+450,14139808,Update Performance.rmd,closed,lindbrook,Performance.rmd
+449,13989942,Update Performance.rmd,closed,lindbrook,Performance.rmd
+448,13874754,Update C-interface.rmd,closed,agrabovsky,C-interface.rmd
+447,13865702,Update dsl.rmd,closed,lindbrook,dsl.rmd
+446,13862352,fixed a tiny typo in Rcpp.rmd,closed,eriqande,Rcpp.rmd
+445,13772446,Update dsl.rmd,closed,lindbrook,dsl.rmd
+444,13720263,Update Subsetting - minor tweaks,closed,justmarkham,Subsetting.rmd
+443,13526984,Update Expressions.rmd,closed,lindbrook,Expressions.rmd
+442,13507643,Expressions,closed,lindbrook,Expressions.rmd
+441,13504397,Update Performance.rmd,closed,darrkj,Performance.rmd
+440,13504367,Update Performance.rmd,closed,darrkj,Performance.rmd
+439,13456090,Expressions,closed,lindbrook,Expressions.rmd
+438,13406837,NSE:Calling to Downsides,closed,lindbrook,Computing-on-the-language.rmd
+437,13357599,missing word,closed,renkun-ken,Profiling.rmd
+436,13353025,Scoping issues,closed,lindbrook,Computing-on-the-language.rmd
+435,13350392,typo,closed,renkun-ken,Computing-on-the-language.rmd
+434,13234576,Update Introduction.rmd,closed,shannonrush,Introduction.rmd
+433,13200065,NSE: expressions and subset,closed,lindbrook,Computing-on-the-language.rmd
+432,13148860,"Combining FOs, common pattern & subtle bug",closed,lindbrook,Function-operators.rmd
+431,13142208,Input FOs,closed,lindbrook,Function-operators.rmd
+430,13140737,Input FOs,closed,lindbrook,Function-operators.rmd
+429,13080477,Behavioural FOs (cont'd) + Output FOs,closed,lindbrook,Function-operators.rmd
+428,12990611,Behavioural FOs intro,closed,lindbrook,Function-operators.rmd
+427,12990158,Section headings as the four types of FO's,closed,lindbrook,Function-operators.rmd
+426,12965150,Fixed a small typo,closed,wilkinson,memory.rmd
+425,12939815,Function operators & In other languages,closed,lindbrook,Function-operators.rmd
+424,12930782,reductive cumulative sum +,closed,lindbrook,Functionals.rmd
+423,12924250,Fix the way of getting Rinternals header path,closed,gokceneraslan,C-interface.rmd
+422,12841748,A family of functions,closed,lindbrook,Functionals.rmd
+421,12820826,Mathematical functionals & Converting loops,closed,lindbrook,Functionals.rmd
+420,12778495,period,closed,ajschumacher,Function-operators.rmd
+419,12777141,italicize list items; four spaces for indent,closed,ajschumacher,Functionals.rmd
+418,12776775,grammar / shorter sentences,closed,ajschumacher,Functionals.rmd
+417,12776501,na.rm default to FALSE,closed,ajschumacher,Functionals.rmd
+416,12776465,add periods at end of sentences,closed,ajschumacher,Functionals.rmd
+415,12754692,fixed typos,closed,MaartenKruijver,Computing-on-the-language.rmd
+414,12732740,Functional programming,closed,lindbrook,Functionals.rmd
+413,12728864,re-clarify two examples,closed,ajschumacher,Functionals.rmd
+412,12700567,clarify two example implementations,closed,ajschumacher,Functionals.rmd
+411,12698265,Update memory.rmd - fixing typos,closed,clayford,memory.rmd
+410,12659928,add period,closed,ajschumacher,Functionals.rmd
+409,12659039,grammar / default Reduce is L-to-R,closed,ajschumacher,Functionals.rmd
+408,12658816,readability,closed,ajschumacher,Functionals.rmd
+407,12658375,"tense, period inside parens",closed,ajschumacher,Functionals.rmd
+406,12658224,period inside parentheses,closed,ajschumacher,Functionals.rmd
+405,12656704,consistent tense (add s),closed,ajschumacher,Functionals.rmd
+404,12656080,"punctuation, full argument name, capitalization",closed,ajschumacher,Functionals.rmd
+403,12655631,missing word,closed,ajschumacher,Functionals.rmd
+402,12655552,periods,closed,ajschumacher,Functionals.rmd
+401,12654608,"punctuation, formal name, ordering",closed,ajschumacher,Functionals.rmd
+399,12639656,Data structure functionals,closed,lindbrook,Functionals.rmd
+398,12598664,For loop functionals: friends of `lapply()`,closed,lindbrook,Functionals.rmd
+397,12595746,Fixed type order,closed,linzhp,Data-structures.rmd
+396,12586423,typo + looping patterns,closed,lindbrook,Functionals.rmd
+395,12577571,Update Rcpp.rmd,closed,Ironholds,Rcpp.rmd
+394,12528970,My first functional,closed,lindbrook,Functionals.rmd
+393,12492210,Functionals introduction,closed,lindbrook,Functionals.rmd
+392,12442723,small typo,closed,shabbychef,Namespaces.rmd
+391,12347492,typo - capital / period,closed,ajschumacher,memory.rmd
+390,12339180,Case study: numerical integration,closed,lindbrook,Functional-programming.rmd
+389,12338195,Lists of functions,closed,lindbrook,Functional-programming.rmd
+387,12315095,Typos,closed,crtahlin,memory.rmd
+385,12313227,Typo.,closed,crtahlin,Profiling.rmd
+384,12311411,Typos,closed,crtahlin,Performance.rmd
+383,12309057,Typos,closed,crtahlin,Functionals.rmd
+382,12300386,Update Introduction.rmd,closed,lindbrook,Introduction.rmd
+380,12275737,Fix typo looki->look,closed,gokceneraslan,Performance.rmd
+379,12266229,"""shouldn't run or display""",closed,ajschumacher,Functionals.rmd
+378,12265313,Typo,closed,crtahlin,Functionals.rmd
+377,12247974,Update Testing.rmd,closed,lindbrook,Testing.rmd
+376,12240638,"indent block, add periods",closed,ajschumacher,Functionals.rmd
+375,12240582,Fix typo intution->intuition,closed,gokceneraslan,Performance.rmd
+374,12239611,"consistent names - ""xs"" and ""ws""",closed,ajschumacher,Functionals.rmd
+373,12239109,sapply actually returning list(),closed,ajschumacher,Functionals.rmd
+372,12238565,re-word problem statement,closed,ajschumacher,Functionals.rmd
+371,12237310,"consistent spacing - ""for (""",closed,ajschumacher,Functionals.rmd
+370,12237176,"typo - ""an vector"" to ""a vector""",closed,ajschumacher,Functionals.rmd
+369,12229576,"typos - ""a"", ""P"", "".""",closed,ajschumacher,Functionals.rmd
+368,12229361,clean up link and phrasing,closed,ajschumacher,Functionals.rmd
+367,12228785,echo instead of eval,closed,ajschumacher,Functionals.rmd
+366,12228375,URL becomes link,closed,ajschumacher,Functional-programming.rmd
+365,12228248,periods and capitalization,closed,ajschumacher,Functional-programming.rmd
+364,12227447,interpretation depends on `x`,closed,ajschumacher,Functional-programming.rmd
+363,12227068,add periods and tweak wording,closed,ajschumacher,Functional-programming.rmd
+362,12225704,connect / order examples,closed,ajschumacher,Functional-programming.rmd
+361,12224493,backtick lapply,closed,ajschumacher,Functional-programming.rmd
+360,12223422,typo - word order,closed,ajschumacher,Functional-programming.rmd
+359,12223115,typo - missing period,closed,ajschumacher,Functional-programming.rmd
+358,12222610,provide reference to OO chapter,closed,ajschumacher,Functional-programming.rmd
+357,12222432,clarify and remove redundant result comments,closed,ajschumacher,Functional-programming.rmd
+356,12222043,typo - missing period,closed,ajschumacher,Functional-programming.rmd
+354,12212133,Fix small typo,closed,vzemlys,Performance.rmd
+353,12211907,Fix small typo,closed,vzemlys,Performance.rmd
+352,12210989,mutable state,closed,lindbrook,Functional-programming.rmd
+351,12201707,typo,closed,Lingbing,memory.rmd
+350,12201406,Introduction to closures,closed,lindbrook,Functional-programming.rmd
+349,12199898,typo,closed,Lingbing,memory.rmd
+348,12191638,fixing typos,closed,clayford,Performance.rmd
+347,12174721,"Sentence correction,Example correction",closed,crtahlin,Functionals.rmd
+345,12165924,Anonymous functions,closed,lindbrook,Functional-programming.rmd
+344,12125449,Introduction,closed,lindbrook,Introduction.rmd
+343,12104723,Motivation,closed,lindbrook,Functional-programming.rmd
+342,12104425,Update Package-basics.rmd,closed,Ironholds,Package-basics.rmd
+341,12065651,typo,closed,Lingbing,Package-basics.rmd
+340,12048876,extra word typo,closed,lindbrook,Functional-programming.rmd
+339,12016033,Other languages,closed,lindbrook,Functional-programming.rmd
+338,12007261,Fixed 'arugment' typo,closed,jochenvdv,C-interface.rmd
+336,11991674,Fix typo,closed,nstjhp,Computing-on-the-language.rmd
+335,11990537,"Getting `:)`, delayed bindings timing",closed,tonytonov,Environments.rmd
+334,11979660,Functional Programming intro,closed,lindbrook,Functional-programming.rmd
+333,11932850,typo and suggested link,closed,Lingbing,Profiling.rmd
+332,11932581,typo,closed,Lingbing,Performance.rmd
+330,11928913,clarify language,closed,ajschumacher,Functional-programming.rmd
+329,11928598,clean up markdown for nested bullets,closed,ajschumacher,Functional-programming.rmd
+328,11928387,clarify description and example,closed,ajschumacher,Functional-programming.rmd
+327,11927910,"typo - ""anoynmous""",closed,ajschumacher,Functional-programming.rmd
+326,11927888,eval=FALSE instead of echo=FALSE,closed,ajschumacher,Functional-programming.rmd
+325,11927481,"number agreement, grammar",closed,ajschumacher,Functional-programming.rmd
+324,11927414,convert to sentence,closed,ajschumacher,Functional-programming.rmd
+323,11877553,"typo - ""is"" to ""if""",closed,ajschumacher,Exceptions-Debugging.rmd
+322,11877437,make parenthetical into proper sentence,closed,ajschumacher,Exceptions-Debugging.rmd
+321,11877385,"typo - missing ""the""",closed,ajschumacher,Exceptions-Debugging.rmd
+319,11870314,Defensive programming,closed,lindbrook,Exceptions-Debugging.rmd
+318,11866525,Update Package-development-cycle.rmd (typos/suggestions),closed,liangcj,Package-development-cycle.rmd
+317,11849498,Update memory.rmd,closed,clayford,memory.rmd
+316,11834759,"typos, extra white space, knitr option",closed,tonytonov,Environments.rmd
+315,11834078,Debugging tools and condition handling,closed,lindbrook,Exceptions-Debugging.rmd
+314,11825191,Debugging tools intro,closed,lindbrook,Exceptions-Debugging.rmd
+313,11812650,Typos in performance chapter,closed,parkerabercrombie,Performance.rmd
+312,11798173,typo,closed,Lingbing,Special-environments.rmd
+311,11790019,competent -> fluent?,closed,lindbrook,Vocabulary.rmd
+310,11787098,Line length & typo,closed,lindbrook,Style.rmd
+309,11786385,Update index.rmd,closed,Ironholds,index.rmd
+308,11782689,Update Functional-programming.rmd,closed,Ironholds,Functional-programming.rmd
+307,11782405,Update Special-environments.rmd,closed,Ironholds,Special-environments.rmd
+306,11779493,Update Data-structures.rmd,closed,Ironholds,Data-structures.rmd
+305,11779189,Update Environments.rmd,closed,Ironholds,Environments.rmd
+304,11773574,Debugging techniques,closed,lindbrook,Exceptions-Debugging.rmd
+303,11766913,"typo - chunk option ""message"" (no ""s"")",closed,ajschumacher,Functional-programming.rmd
+302,11766329,add link to function operators,closed,ajschumacher,Exceptions-Debugging.rmd
+301,11756514,correct linking style,closed,ajschumacher,Exceptions-Debugging.rmd
+300,11756363,"clickable ""functions chapter""",closed,ajschumacher,Exceptions-Debugging.rmd
+299,11748001,Changing class manually with short output,closed,tonytonov,OO-essentials.rmd
+298,11746270,style guide,closed,lindbrook,Style.rmd
+297,11723467,dummy out block to include error,closed,ajschumacher,Exceptions-Debugging.rmd
+296,11720585,typo - match RStudio's capitalization,closed,ajschumacher,Exceptions-Debugging.rmd
+295,11718348,"typo - should be ""Rerun with Debug""",closed,ajschumacher,Exceptions-Debugging.rmd
+294,11708998,Distinction between body() and formals(),closed,tonytonov,Functions.rmd
+293,11700034,Exception-Debugging intro,closed,lindbrook,Exceptions-Debugging.rmd
+292,11683699,"Correcting ""Someimes"" typo.",closed,tyhenkaline,Data-structures.rmd
+291,11683437,typo - particularLY,closed,ajschumacher,Exceptions-Debugging.rmd
+290,11683084,"typo - missing word (added ""that"")",closed,ajschumacher,Exceptions-Debugging.rmd
+289,11671071,is this bug still existing?,closed,Lingbing,Expressions.rmd
+288,11670714,typo,closed,Lingbing,Expressions.rmd
+287,11653112,"ANY no quotes, backticks for code format",closed,ajschumacher,OO-essentials.rmd
+286,11653068,clarify user infix precedence note,closed,ajschumacher,Environments.rmd
+285,11652978,clarify use of environment() in function,closed,ajschumacher,Environments.rmd
+284,11640692,fix typo,closed,clayford,Functions.rmd
+283,11632915,typo - period at end of sentence,closed,ajschumacher,OO-essentials.rmd
+282,11632684,revise for clarity,closed,ajschumacher,OO-essentials.rmd
+281,11632055,"code format for ""ANY""",closed,ajschumacher,OO-essentials.rmd
+280,11618672,typo,closed,Lingbing,Computing-on-the-language.rmd
+279,11579359,example should show the delayed evaluation,closed,ajschumacher,Environments.rmd
+278,11579302,"""highest"" instead of ""lowest""",closed,ajschumacher,Environments.rmd
+277,11578669,phrasing - indicate reason for doing,closed,ajschumacher,Environments.rmd
+276,11578443,simplify (fix?) code,closed,ajschumacher,Environments.rmd
+275,11578306,"typo - remove "" #>""",closed,ajschumacher,Environments.rmd
+274,11578150,add a period,closed,ajschumacher,Environments.rmd
+273,11577410,grammar and argument fix,closed,ajschumacher,Environments.rmd
+272,11577149,"grammar - add ""that"", ""a""",closed,ajschumacher,Environments.rmd
+271,11576350,"grammar, formatting",closed,ajschumacher,Environments.rmd
+270,11576160,tighten language for clarity,closed,ajschumacher,Environments.rmd
+269,11575819,align code to framing text,closed,ajschumacher,Environments.rmd
+268,11574138,plot not showing,closed,Lingbing,Computing-on-the-language.rmd
+267,11573782,"eval, not echo",closed,Lingbing,Function-operators.rmd
+266,11573713,why echo?,closed,Lingbing,Function-operators.rmd
+265,11573580,typo,closed,Lingbing,Function-operators.rmd
+264,11572570,do we have this where() function?,closed,Lingbing,Function-operators.rmd
+263,11562720,typo,closed,Lingbing,Function-operators.rmd
+260,11523728,a possible typo,closed,Lingbing,Functionals.rmd
+259,11523455,typo,closed,Lingbing,Functionals.rmd
+258,11523001,a possible caveat for reader,closed,Lingbing,Functionals.rmd
+257,11522678,messy outputs on webpage,closed,Lingbing,Functionals.rmd
+256,11499380,"add backticks, clarify command line vs. batch mode",closed,ajschumacher,OO-essentials.rmd
+255,11497875,"typo - help not call, capitalize NextMethod",closed,ajschumacher,OO-essentials.rmd
+254,11497562,typo / clarification - parenthesis and quotations,closed,ajschumacher,OO-essentials.rmd
+253,11468803,fixed small typos in Release.rmd,closed,jdblischak,Release.rmd
+252,11467537,clarify / remove redundancy,closed,ajschumacher,Functions.rmd
+251,11465400,typo - missing verb (know),closed,ajschumacher,Functions.rmd
+250,11464076,"typos - ""mostly"" to ""most"" and punctuation",closed,ajschumacher,Functions.rmd
+249,11451391,Typo: unnused -> unused,closed,tonytonov,Subsetting.rmd
+248,11446294,a possible typo,closed,Lingbing,Functional-programming.rmd
+247,11440746,force the error message to show,closed,Lingbing,Exceptions-Debugging.rmd
+246,11440191,typo,closed,Lingbing,Exceptions-Debugging.rmd
+245,11440134,typo,closed,Lingbing,Exceptions-Debugging.rmd
+244,11439318,"typo - ""NA_real"" to ""NA_real_""",closed,ajschumacher,Subsetting.rmd
+243,11439095,"likely typo - ""simple"" to ""single""",closed,ajschumacher,Subsetting.rmd
+242,11433362,for package referring consistency,closed,Lingbing,Environments.rmd
+240,11425016,align example to text,closed,ajschumacher,Data-structures.rmd
+239,11424955,"typo, and correct arg to read.csv is na.strings",closed,ajschumacher,Data-structures.rmd
+238,11424930,correct arg to read.csv is na.strings,closed,ajschumacher,Data-structures.rmd
+237,11424909,typo/ordering,closed,ajschumacher,Data-structures.rmd
+236,11424894,"clean out ""NB"" annotations",closed,ajschumacher,Data-structures.rmd
+235,11416875,"typo - ""using with an"" to ""using an""",closed,ajschumacher,Data-structures.rmd
+234,11416504,don't show answers for exercises,closed,ajschumacher,Data-structures.rmd
+233,11415177,"typo - ""reason"" to ""reasons""",closed,ajschumacher,Data-structures.rmd
+232,11414180,typo,closed,ajschumacher,Introduction.rmd
+231,11398192,CamelCase,closed,Lingbing,OO-essentials.rmd
+230,11355359,typo,closed,Lingbing,Functions.rmd
+229,11354496,"define more explicitly for ""contiguous""",closed,Lingbing,Subsetting.rmd
+228,11353362,set seed to make it reproducible,closed,Lingbing,Subsetting.rmd
+227,11346751,Each time you run + typos + white spaces,closed,lindbrook,Environments.rmd
+226,11345476,"corrected name of ""auto_test"" (from ""autotest"")",closed,dchudz,Testing.rmd
+225,11333136,Function Environments and Explcit scoping...,closed,lindbrook,Environments.rmd
+224,11306791,typos,closed,lindbrook,Environments.rmd
+223,11275289,recurse up,closed,lindbrook,Environments.rmd
+222,11236538,typo,closed,lindbrook,Functions.rmd
+221,11233076,Introduction and Environment basics,closed,lindbrook,Environments.rmd
+220,11226180,Drop quotes around names consistently,closed,pelotom,Subsetting.rmd
+219,11208039,Update Documenting-functions.rmd,closed,famuvie,Documenting-functions.rmd
+218,11201390,RC & Picking a system,closed,lindbrook,OO-essentials.rmd
+217,11199739,S4,closed,lindbrook,OO-essentials.rmd
+216,11187979,You don't pass,closed,lindbrook,OO-essentials.rmd
+215,11150283,Update Subsetting.rmd,closed,Ironholds,Subsetting.rmd
+214,11123426,S3,closed,lindbrook,OO-essentials.rmd
+213,11107379,OO Field Guide Intro and Base Types,closed,lindbrook,OO-essentials.rmd
+212,11088489,Update Introduction.rmd,closed,Ironholds,Introduction.rmd
+209,11068473,Special calls,closed,lindbrook,Functions.rmd
+208,11068075,comes at a price,closed,lindbrook,Functions.rmd
+207,11045036,typo,closed,lindbrook,Functions.rmd
+206,11042384,Function arguments,closed,lindbrook,Functions.rmd
+205,11042190,Every operation is a function call,closed,lindbrook,Functions.rmd
+204,11038982,Functions v. Variables,closed,lindbrook,Functions.rmd
+203,11033203,name masking,closed,lindbrook,Functions.rmd
+202,10986256,Code chunk and typo fixes to Environments.rmd,closed,liangcj,Environments.rmd
+201,10925369,lexical scoping,closed,lindbrook,Functions.rmd
+200,10924651,Primitive functions,closed,lindbrook,Functions.rmd
+199,10924474,Components of a function II,closed,lindbrook,Functions.rmd
+198,10917887,Typo corrections,closed,liangcj,Functions.rmd
+197,10903357,Components of a function,closed,lindbrook,Functions.rmd
+196,10843976,"commas, etc",closed,lindbrook,Subsetting.rmd
+195,10843472,with nothing,closed,lindbrook,Subsetting.rmd
+194,10843429,Why logical vectors are useful,closed,lindbrook,Subsetting.rmd
+193,10839676,Minor typo suggestion,closed,liangcj,Computing-on-the-language.rmd
+192,10837558,Update Functionals.rmd,closed,mjsduncan,Functionals.rmd
+191,10834994,Update Functionals.rmd,closed,mjsduncan,Functionals.rmd
+190,10830310,Update Functions.rmd,closed,mjsduncan,Functions.rmd
+189,10792038,Subsetting exercises,closed,lindbrook,Subsetting.rmd
+188,10776402,Update Package-quick-reference.rmd,closed,arilamstein,Package-quick-reference.rmd
+187,10740374,interrelated concepts,closed,lindbrook,Subsetting.rmd
+185,10711953,Update Expressions.rmd,closed,Ironholds,Expressions.rmd
+184,10660328,Small grammatical edit,closed,jdblischak,Documenting-functions.rmd
+182,10631503,Update Data-structures.rmd,closed,jentjr,Data-structures.rmd
+181,10631452,Update Data-structures.rmd,closed,jentjr,Data-structures.rmd
+180,10631354,Update Data-structures.rmd,closed,jentjr,Data-structures.rmd
+179,10631082,Update Data-structures.rmd,closed,jentjr,Data-structures.rmd
+178,10610706,updates Functions.rmd,closed,ijlyttle,Functions.rmd
+177,10578651,s/the the/the/g,closed,robertzk,OO-essentials.rmd
+176,10576515,fix missing infix operator,closed,robertzk,Functions.rmd
+175,10560282,Fix more broken links,closed,binarybana,Functions.rmd
+174,10558176,Fix two non-functional links.,closed,binarybana,Functions.rmd
+173,10551028,Some typos fixed.,closed,crtahlin,Functional-programming.rmd
+170,10542922,Update Data-structures.rmd,closed,lindbrook,Data-structures.rmd
+169,10527254,Update Functions.rmd,closed,gmonaie,Functions.rmd
+168,10511219,Fixed small typo in code chunk,closed,ncarchedi,Exceptions-Debugging.rmd
+167,10501233,elements of a vector,closed,lindbrook,Data-structures.rmd
+166,10500773,Subsetting.Rmd: proposes a few small things for consistency,closed,ijlyttle,Subsetting.rmd
+165,10496994,"""have"" -> ""need""",closed,lindbrook,Data-structures.rmd
+164,10496898,Names,closed,lindbrook,Data-structures.rmd
+163,10495970,implicit coercion,closed,lindbrook,Data-structures.rmd
+162,10495901,"""for example,""",closed,lindbrook,Data-structures.rmd
+161,10495836,atomic vector coercion,closed,lindbrook,Data-structures.rmd
+160,10495747,NB is.numeric(),closed,lindbrook,Data-structures.rmd
+159,10495631,vector typeof(),closed,lindbrook,Data-structures.rmd
+158,10495514,nesting c()'s,closed,lindbrook,Data-structures.rmd
+157,10495470,beware,closed,lindbrook,Data-structures.rmd
+156,10495395,to -> from ?,closed,lindbrook,Data-structures.rmd
+155,10495332,vectors plural,closed,lindbrook,Data-structures.rmd
+154,10495280,mind quickly,closed,lindbrook,Data-structures.rmd
+153,10495233,esoteric objects,closed,lindbrook,Data-structures.rmd
+152,10495120,brief overview,closed,lindbrook,Data-structures.rmd
+151,10487507,typo and separate last para. into two para.,closed,lindbrook,index.rmd
+150,10472206,Missing word?,closed,crtahlin,Exceptions-Debugging.rmd
+149,10471828,Typo?,closed,crtahlin,Exceptions-Debugging.rmd
+148,10471779,Added full stop.,closed,crtahlin,Exceptions-Debugging.rmd
+147,10471049,Typo?,closed,crtahlin,Exceptions-Debugging.rmd
+146,10470555,Typo fix.,closed,crtahlin,Exceptions-Debugging.rmd
+145,10469911,Typo.,closed,crtahlin,Exceptions-Debugging.rmd
+144,10469693,Typo.,closed,crtahlin,Exceptions-Debugging.rmd
+143,10469375,Moved full stop.,closed,crtahlin,Exceptions-Debugging.rmd
+142,10468897,"Word order, missing words.",closed,crtahlin,Exceptions-Debugging.rmd
+141,10468778,Typo.,closed,crtahlin,Exceptions-Debugging.rmd
+140,10468447,Dead link.,closed,crtahlin,Exceptions-Debugging.rmd
+139,10468257,Typo.,closed,crtahlin,Exceptions-Debugging.rmd
+138,10455951,"fixes typos, link in Data-Structures.Rmd",closed,ijlyttle,Data-structures.rmd
+137,10444166,A fair number of typos fixed,closed,statist7,OO-essentials.rmd
+136,10437464,omit trailing comma,closed,statist7,Vocabulary.rmd
+135,10435240,Unneede bullet or missing exercise?,closed,crtahlin,Environments.rmd
+134,10435177,Added full stop.,closed,crtahlin,Environments.rmd
+133,10435086,Typo fix.,closed,crtahlin,Environments.rmd
+132,10432745,Moved full stop.,closed,crtahlin,Environments.rmd
+131,10432629,Uneeded words?,closed,crtahlin,Environments.rmd
+130,10430547,Added comment - example returns wrong value?,closed,crtahlin,Environments.rmd
+129,10430308,distinguish between … and ….,closed,statist7,Functions.rmd
+128,10430198,Added full stop (see also some comments).,closed,crtahlin,Environments.rmd
+127,10429998,fix typo,closed,statist7,Functions.rmd
+126,10423575,Fix two typos,closed,statist7,Data-structures.rmd
+125,10418078,few typos and edit package section to adapt to next Rcpp,closed,romainfrancois,Rcpp.rmd
+124,10414001,Update memory.rmd,closed,lindbrook,memory.rmd
+123,10411714,Add periods to bulleted items,closed,WilDoane,Functions.rmd
+122,10411689,Correct typo,closed,WilDoane,Subsetting.rmd
+121,10411659,Change integer sample data to character data,closed,WilDoane,Subsetting.rmd
+120,10406697,Correct typos,closed,WilDoane,Subsetting.rmd
+119,10406643,Replace separating-commas in simplifying/preserving table,closed,WilDoane,Subsetting.rmd
+117,10390423,Fix Hyperlink,closed,AEzzatA,Functions.rmd
+116,10388921,Incorrect link name?,closed,crtahlin,Environments.rmd
+115,10382483,Updated Rcpp.md,closed,eddelbuettel,Rcpp.rmd
+114,10377704,distinguish data.frame class from data.frame() function,closed,WilDoane,Data-structures.rmd
+113,10377618,Correct punctuation,closed,WilDoane,Data-structures.rmd
+112,10375959,Change placement of comments; refine ambiguous explanation in comment,closed,WilDoane,Data-structures.rmd
+111,10375859,Correct typos in Factors section,closed,WilDoane,Data-structures.rmd
+110,10375532,Change variable names to not conflict with data types or built-in functi...,closed,WilDoane,Data-structures.rmd
+109,10375210,Correct typos,closed,WilDoane,Data-structures.rmd
+108,10374017,changed it's to its on 370,closed,seanmcm,Data-structures.rmd
+107,10373335,"Fixing a typo: extra ""the""",closed,ihar,OO-essentials.rmd
+106,10373108,Extra comma deleted,closed,ihar,OO-essentials.rmd
+105,10368027,Extra word deleted.,closed,crtahlin,OO-essentials.rmd
+104,10367785,Moved full stop.,closed,crtahlin,OO-essentials.rmd
+103,10367275,"Added: caps, full stop, deleted a word.",closed,crtahlin,OO-essentials.rmd
+101,10338842,Typo.,closed,crtahlin,OO-essentials.rmd
+100,10338798,Unneeded word?,closed,crtahlin,OO-essentials.rmd
+99,10324996,Language names (rebased off master),closed,absolutelyNoWarranty,C-interface.rmd
+99,10324996,Language names (rebased off master),closed,absolutelyNoWarranty,Documenting-functions.rmd
+99,10324996,Language names (rebased off master),closed,absolutelyNoWarranty,Documenting-packages.rmd
+99,10324996,Language names (rebased off master),closed,absolutelyNoWarranty,Environments.rmd
+99,10324996,Language names (rebased off master),closed,absolutelyNoWarranty,Exceptions-Debugging.rmd
+99,10324996,Language names (rebased off master),closed,absolutelyNoWarranty,Expressions.rmd
+99,10324996,Language names (rebased off master),closed,absolutelyNoWarranty,Function-operators.rmd
+99,10324996,Language names (rebased off master),closed,absolutelyNoWarranty,Functional-programming.rmd
+99,10324996,Language names (rebased off master),closed,absolutelyNoWarranty,Package-basics.rmd
+99,10324996,Language names (rebased off master),closed,absolutelyNoWarranty,Special-environments.rmd
+99,10324996,Language names (rebased off master),closed,absolutelyNoWarranty,dsl.rmd
+98,10297695,Added full stops.,closed,crtahlin,Functions.rmd
+97,10297493,Missing hyperlink.,closed,crtahlin,Functions.rmd
+96,10296808,Missing full stop,closed,crtahlin,Functions.rmd
+95,10258041,One dot too many,closed,crtahlin,Functions.rmd
+94,10257906,Missing / wrong chapter reference?,closed,crtahlin,Functions.rmd
+93,10256523,Missing full stops.,closed,crtahlin,Functions.rmd
+92,10256461,Missing hyperlink,closed,crtahlin,Functions.rmd
+91,10255902,Missing hyperlink,closed,crtahlin,Functions.rmd
+90,10255570,Missing hyperlink,closed,crtahlin,Functions.rmd
+89,10249354,typo,closed,fyears,Rcpp.rmd
+88,10239481,Update Vocabulary.rmd,closed,thomasherbig,Vocabulary.rmd
+87,10233045,Programming Language Names,closed,absolutelyNoWarranty,C-interface.rmd
+87,10233045,Programming Language Names,closed,absolutelyNoWarranty,Documenting-functions.rmd
+87,10233045,Programming Language Names,closed,absolutelyNoWarranty,Documenting-packages.rmd
+87,10233045,Programming Language Names,closed,absolutelyNoWarranty,Environments.rmd
+87,10233045,Programming Language Names,closed,absolutelyNoWarranty,Exceptions-Debugging.rmd
+87,10233045,Programming Language Names,closed,absolutelyNoWarranty,Expressions.rmd
+87,10233045,Programming Language Names,closed,absolutelyNoWarranty,Function-operators.rmd
+87,10233045,Programming Language Names,closed,absolutelyNoWarranty,Functional-programming.rmd
+87,10233045,Programming Language Names,closed,absolutelyNoWarranty,Introduction.rmd
+87,10233045,Programming Language Names,closed,absolutelyNoWarranty,Package-basics.rmd
+87,10233045,Programming Language Names,closed,absolutelyNoWarranty,Special-environments.rmd
+87,10233045,Programming Language Names,closed,absolutelyNoWarranty,dsl.rmd
+86,10204298,Should be a hyperlink?,closed,crtahlin,Functions.rmd
+85,10160813,Fix typo,closed,absolutelyNoWarranty,memory.rmd
+84,10160464,Fix typo,closed,absolutelyNoWarranty,memory.rmd
+84,10160464,Fix typo,closed,absolutelyNoWarranty,memory.rmd~
+83,10145610,Update Environments.rmd,closed,Ironholds,Environments.rmd
+82,10145460,Update OO-essentials.rmd,closed,Ironholds,OO-essentials.rmd
+81,10131516,Should be a hyperlink?,closed,crtahlin,Subsetting.rmd
+80,10054701,"clarify that run-all.R goes under R/tests, not inst/tests",closed,dckc,Testing.rmd
+79,10050646,Typo?,closed,crtahlin,Subsetting.rmd
+78,10050203,Word repeats in next sentence - uneeded?,closed,crtahlin,Subsetting.rmd
+76,10032741,change the address of the book project,closed,fyears,Introduction.rmd
+75,10025849,Typo.,closed,crtahlin,Data-structures.rmd
+74,10025550,Added adjective.,closed,crtahlin,Data-structures.rmd
+73,10025326,Unneeded words?,closed,crtahlin,Introduction.rmd
+72,10025285,"Suggestion - define acronym ""OO"".",closed,crtahlin,Introduction.rmd
+71,10025244,Typo.,closed,crtahlin,Introduction.rmd
+70,10019558,Update OO-essentials.rmd,closed,Ironholds,OO-essentials.rmd
+69,10016508,Update Exceptions-Debugging.rmd,closed,Ironholds,Exceptions-Debugging.rmd
+68,10013575,Update Data-structures.rmd,closed,Ironholds,Data-structures.rmd
+67,10012867,Update Functions.rmd,closed,Ironholds,Functions.rmd
+66,10012692,Update Data-structures.rmd,closed,Ironholds,Data-structures.rmd
+65,10012380,Update Function-operators.rmd,closed,Ironholds,Function-operators.rmd
+64,10012263,Update C-interface.rmd,closed,Ironholds,C-interface.rmd
+62,9863658,Fixed typo,closed,kdauria,Documenting-functions.rmd
+61,9861908,Fixed typo,closed,kdauria,Package-development-cycle.rmd
+60,9825801,Update Special-environments.rmd,closed,zackham,Special-environments.rmd
+59,9823941,Fixing typo in subset2,closed,seancarmody,Computing-on-the-language.rmd
+58,9426694,Typo in Performance.rmd,closed,kdauria,Performance.rmd
+57,9393150,Make urls to cplusplus.com references clickable,closed,PeteHaitch,Rcpp.rmd
+55,9288558,Miscellaneous changes.,closed,absolutelyNoWarranty,Introduction.rmd
+54,9236815,Update Computing-on-the-language.rmd,closed,eipi10,Computing-on-the-language.rmd
+53,9053730,Update Functions.rmd,closed,miroslavsabo,Functions.rmd
+52,9045548,Adjust for consistency. Fix some typos.,closed,absolutelyNoWarranty,Rcpp.rmd
+51,8934416,Fixed typo,closed,kdauria,Functionals.rmd
+50,8933641,Fixed typo,closed,kdauria,Functionals.rmd
+49,8926815,Fixed typo,closed,kdauria,Functional-programming.rmd
+48,8924258,Fixing typo: Update Functional-programming.rmd,closed,kdauria,Functional-programming.rmd
+47,8877097,Update Rcpp.rmd,closed,absolutelyNoWarranty,Rcpp.rmd
+46,8712325,Add version number section,closed,wch,Release.rmd
+45,8694016,Update Functional-programming.rmd,closed,rmsharp,Functional-programming.rmd
+44,8693661,Update Package-development-cycle.rmd,closed,rmsharp,Package-development-cycle.rmd
+43,8693511,Update Documenting-functions.rmd,closed,rmsharp,Documenting-functions.rmd
+42,8514512,Update Functional-programming.rmd,closed,stephens999,Functional-programming.rmd
+41,8514398,Update Functional-programming.rmd,closed,stephens999,Functional-programming.rmd
+40,8513236,Update Functional-programming.rmd,closed,stephens999,Functional-programming.rmd
+38,8501700,Provide omitted word.,closed,trestletech,OO-essentials.rmd
+37,8500898,Change R5 reference to the new and preferred RC,closed,juancentro,Functional-programming.rmd
+36,8463576,Update Vocabulary.rmd,closed,gregorp,Vocabulary.rmd
+35,8259040,"fixed typo, then revised sentence for clarity",closed,dlebauer,Package-development-cycle.rmd
+34,8200441,Changed array storage from row major order to column-major order,closed,stewid,Subsetting.rmd
+33,8163831,Fix another typo in Functions.rmd,closed,juancentro,Functions.rmd
+32,8163792,Fix typo in Functions.rmd,closed,juancentro,Functions.rmd
+31,8148436,Fix minor typos in html section,closed,cwickham,dsl.rmd
+29,8011199,Update Expressions.rmd,closed,mjsduncan,Expressions.rmd
+28,7974016,Update Functionals.rmd,closed,tjmahr,Functionals.rmd
+27,7901320,Fix typos in Computing-on-the-language.html,closed,cwickham,Computing-on-the-language.rmd
+26,7885919,Added Clarification in R CMD check section on test filename requirements...,closed,sritchie73,Testing.rmd
+24,7844819,Switch from latex to the preferred LaTeX,closed,juancentro,dsl.rmd
+23,7844802,Switch all dsl to DSL,closed,juancentro,dsl.rmd
+22,7844793,Switch from html to HTML to avoid inconsistent capping,closed,juancentro,dsl.rmd
+21,7844721,Avoid bad practice of changing a standard name (c) to something else,closed,juancentro,Special-environments.rmd
+20,7844649,Fix some links,closed,juancentro,Expressions.rmd
+19,7844559,Fix some links,closed,juancentro,Function-operators.rmd
+18,7844426,Added x_call line otherwise the code throws errors,closed,juancentro,Expressions.rmd
+17,7844387,Fix concordance error,closed,juancentro,Expressions.rmd
+16,7842061,fix links,closed,ramnathv,Data-structures.rmd
+15,7839494,Fixing typo,closed,juancentro,Function-operators.rmd
+14,7839241,Correct unfinished sentence,closed,juancentro,Exceptions-Debugging.rmd
+13,7837523,Plot is not showing up correctly,closed,darrkj,Functionals.rmd
+12,7837482,simple typo,closed,darrkj,Functionals.rmd
+11,7831993,fixed link with .html,closed,AmeliaMN,Namespaces.rmd
+10,7827938,fixed link,closed,AmeliaMN,Namespaces.rmd
+5,7738021,Minor typos/omissions in Expressions chapter,closed,aaronwolen,Expressions.rmd
+4,7735995,Fix link to edit directly on GitHub,closed,aaronwolen,_layouts/default.html
+3,7733715,Add missing word,closed,aaronwolen,Expressions.rmd

@@ -84,7 +84,7 @@ Similar code is available as a [gist](https://gist.github.com/jennybc/092938a2e2
 
 ### Pull requests on a repo
 
-*Even though it was [Advanced R](http://adv-r.had.co.nz) that got me thinking about this, I first started playing around with [R Packages](http://r-pkgs.had.co.nz). I plan to do same for Advanced R (or maybe someone else will!), but Advanced R will have to do for now.*
+*Even though it was [Advanced R](http://adv-r.had.co.nz) that got me thinking about this, I first started playing around with [R Packages](http://r-pkgs.had.co.nz), which happens to have 50% fewer PRs than Advanced R. But I've done this for both books and present a script and figure for each at the end of this example.*
 
 Load packages. Even more this time.
 
@@ -169,37 +169,19 @@ I want to know which files are affected by each PR. If I had all this stuff loca
 git diff --name-only SHA1 SHA2
 ```
 
-I have to emulate that with the GitHub API It seems the [compare two commits feature](https://developer.github.com/v3/repos/commits/#compare-two-commits) only works for two branches or two tags, but not two arbitrary SHAs. Please enlighten me and answer [this question on StackOverflow](http://stackoverflow.com/questions/26925312/github-api-how-to-compare-2-commits) if you know how to do this.
+I have to emulate that with the GitHub API. It seems the [compare two commits feature](https://developer.github.com/v3/repos/commits/#compare-two-commits) only works for two branches or two tags, but not two arbitrary SHAs. Please enlighten me and answer [this question on StackOverflow](http://stackoverflow.com/questions/26925312/github-api-how-to-compare-2-commits) if you know how to do this.
 
-I'm getting info out of the patch file in a rather icky way, but it works. Here's the helper function I need to run on each pull request. Or, more specifically, on the URL for its patch file.
+My current workaround is to get info on the diff associated with a pull request from its associated patch file. We've already stored these URLs in the `pr_df` data frame. You can read my rather hacky helper function, [`get_pr_affected_files_from_patch()`](get-pr-affected-files-from-patch.R), if you wish, but I'll just source it here.
 
 ``` r
-jdiff <- function(url) {
-  con <- url %>% curl(open = "r")
-  on.exit(close(con))
-  patch <- con %>% readLines()
-  if (length(patch) < 1) {
-    ## in honor of https://github.com/hadley/r-pkgs/pull/317
-    ## 1 commit but 0 files changed, so no patch file :(
-    return(data_frame(file = character(), diffstuff = character()))
-  }
-  stop  <- grep("file[s]? changed", patch) %>% min() %>% `-`(1)
-  start <- grep(            "^---", patch)
-  ## in honor of https://github.com/hadley/r-pkgs/pull/108
-  ## PR message itself includes the regex "^---" :(
-  start <- start[start < stop] %>% max() %>% `+`(1)
-  patch[start:stop] %>%
-    paste(collapse = "\n") %>%
-    paste0("\n") %>% # force read_delim to see as literal data (vs path)
-    read_delim(delim = "|", col_names = c("file", "diffstuff"))
-}
+source("get-pr-affected-files-from-patch.R")
 ```
 
-Add a list-column to the data frame of pull requests. It holds one data frame per PR, which itself has one row per modified file. We use `map()` again and also use `dplyr` and `purrr` together here, in order to preserve association between the existing PR info and the modified files. *This takes around 4 minutes for me FYI.*
+Add a list-column to the data frame of pull requests. It holds one data frame per PR, with info on the file changes. We use `map()` again and also use `dplyr` and `purrr` together here, in order to preserve association between the existing PR info and the modified files. *This takes around 4 minutes for me FYI.*
 
 ``` r
 pr_df <- pr_df %>%
-    mutate(pr_files = patch_url %>% map(jdiff))
+    mutate(pr_files = patch_url %>% map(get_pr_affected_files_from_patch))
 ```
 
 Sanity check the `pr_files` list-column. First, look at an example element. We have one row per file and two variables: `file` and `diffstuff` (currently I do nothing with this but ...). Do all elements of the list-column have exactly two variables? What's the distribution of the number of rows? I expect to see that the vast majority of PRs affect exactly 1 file, because there are lots of typo corrections.
@@ -244,15 +226,29 @@ pr_df %>%
   write_csv("r-pkgs-pr-affected-files.csv")
 ```
 
-This is the ready-to-analyze data re: are earlier chapters the target of more PRs? See it here: [r-pkgs-pr-affected-files.csv](r-pkgs-pr-affected-files.csv)
-
-The code up til this point can be found in [r-pkgs-pr-affected-files.R](r-pkgs-pr-affected-files.R).
-
-Here's a figure depicting how often each chapter has been the target of a pull request. I'm not adjusting for length of the chapter or anything, so take it with a huge grain of salt. But no obvious evidence that people read and edit the earlier chapters more. We like to make suggestions about Git apparently!.
+Here's a figure depicting how often each chapter has been the target of a pull request. I'm not adjusting for length of the chapter or anything, so take it with a huge grain of salt. But there's no obvious evidence that people read and edit the earlier chapters more. We like to make suggestions about Git apparently!.
 
 ![](r-pkgs-pr-affected-files-barchart.png)
 
-The script to make the figure is here: [r-pkgs-pr-affected-files-figs.R](r-pkgs-pr-affected-files-figs.R).
+Recap of files related to PRs on R Packages
+
+-   script to marshal data: [r-pkgs-pr-affected-files.R](r-pkgs-pr-affected-files.R)
+-   ready-to-analyze data: [r-pkgs-pr-affected-files.csv](r-pkgs-pr-affected-files.csv)
+-   barchart: [r-pkgs-pr-affected-files-barchart.png](r-pkgs-pr-affected-files-barchart.png)
+-   script to make barchart: [r-pkgs-pr-affected-files-figs.R](r-pkgs-pr-affected-files-figs.R)
+
+I went through the same steps with all pull requests on [`hadley/adv-r`](https://github.com/hadley/adv-r), the repository for [Advanced R](http://adv-r.had.co.nz).
+
+Here's the same figure as above but for Advanced R. There's a stronger case for earlier chapters being targetted with PRs more often. ¯\_(ツ)\_/¯
+
+![](adv-r-pr-affected-files-barchart.png)
+
+Recap of files related to PRs on Advanced R:
+
+-   script to marshal data: [adv-r-pr-affected-files.R](adv-r-pr-affected-files.R)
+-   ready-to-analyze data: [adv-r-pr-affected-files.csv](adv-r-pr-affected-files.csv)
+-   barchart: [adv-r-pr-affected-files-barchart.png](adv-r-pr-affected-files-barchart.png)
+-   script to make barchart: [adv-r-pr-affected-files-figs.R](adv-r-pr-affected-files-figs.R)
 
 ### Issue threads
 
@@ -278,7 +274,6 @@ devtools::session_info()
 #> Packages ------------------------------------------------------------------
 #>  package    * version    date       source                       
 #>  assertthat   0.1        2013-12-06 CRAN (R 3.2.0)               
-#>  codetools    0.2-14     2015-07-15 CRAN (R 3.2.2)               
 #>  curl       * 0.9.3      2015-08-25 CRAN (R 3.2.0)               
 #>  DBI          0.3.1      2014-09-24 CRAN (R 3.2.0)               
 #>  devtools     1.9.1.9000 2015-11-16 local                        

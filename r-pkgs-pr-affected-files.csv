@@ -1,0 +1,308 @@
+number,id,title,state,user,pr_files
+327,51398771,`.rda` extension is case sensitive,open,almartin82,data.rmd
+326,48678175,modified git command for deleting branch,closed,setoyama60jp,git.rmd
+324,47463575,Update tests.rmd,open,perryjer1,tests.rmd
+323,47457827,Update man.rmd,open,perryjer1,man.rmd
+322,47344525,"slightly modified in the ""Binary builds"" section.",open,setoyama60jp,release.rmd
+320,43412833,"removed extraneous word ""are""",open,rmsharp,tests.rmd
+319,43271518,Fixing typos,open,jpinelo,tests.rmd
+318,42719902,Homogenize LaTeX spelling,closed,LluisRamon,git.rmd
+318,42719902,Homogenize LaTeX spelling,closed,LluisRamon,vignettes.rmd
+316,42037653,Fix small typos in src.Rmd,open,jdblischak,src.rmd
+315,41959127,fix typo,closed,paternogbc,man.rmd
+313,39768768,fix typo,open,road2stat,namespace.rmd
+312,39631796,Update namespace.rmd,open,shntnu,namespace.rmd
+311,39394949,update namespace.md,open,jeremycg,namespace.rmd
+310,39235974,Update tests.rmd,closed,iargent,tests.rmd
+309,39235137,Update tests.rmd,closed,iargent,tests.rmd
+308,38792868,Typo in src.rmd,closed,arnima-github,src.rmd
+307,38781197,"Capitalize ""Ubuntu""",closed,wibeasley,check.rmd
+306,38780364,non-ASCII & encoding in Rdata files,closed,wibeasley,check.rmd
+305,38778716,accidentally being added,closed,wibeasley,git.rmd
+304,38778121,"packageVersion(""foo"") > ""1.0.0""",closed,wibeasley,release.rmd
+303,38182760,fix typo,open,stefanherzog,check.rmd
+302,37148689,small typo,open,havenl,r.rmd
+301,36590772,emphasize all local branches,open,rrunner,git.rmd
+300,36584514,Add `.`,closed,yui-knk,contribute.rmd
+299,36569856,Update vignettes.rmd,open,janzzon,vignettes.rmd
+298,36126209,add \preformatted roxygen tag to reference,closed,daattali,man.rmd
+297,35440305,Fix typo: @imports / @import,closed,agrueneberg,namespace.rmd
+296,35389089,added OS X to case-insensitive operating systems,closed,syclik,r.rmd
+296,35389089,added OS X to case-insensitive operating systems,closed,syclik,style.rmd
+295,35005245,Update r.rmd,closed,adessy,r.rmd
+294,35004162,Update package.rmd,closed,adessy,package.rmd
+293,35002823,Update intro.rmd,closed,adessy,intro.rmd
+292,35001633,Update index.rmd,closed,adessy,index.rmd
+290,34873639,Update to the latest state,closed,uribo,index.rmd
+289,34551025,Correct two typographical errors on Git usage,closed,scw,git.rmd
+286,33607305,Update namespace.rmd,open,ijlyttle,namespace.rmd
+284,32940360,Clarify inst folder moving upon install,closed,sheffien,data.rmd
+283,32864732,"When using system.file, use mustWork = TRUE to have an error message",open,jomuller,data.rmd
+281,32228420,"""diamonds"" -> NULL",open,rnuske,data.rmd
+280,31393547,Travis now supports R as a top-level language,open,vnijs,check.rmd
+279,31313201,fixing a typo,open,matinang,git.rmd
+278,31019195,Fixed typo,closed,danhalligan,man.rmd
+277,30254553,Typos in check file,closed,PeterDee,check.rmd
+275,30051928,Patch1,closed,PeterDee,git.rmd
+275,30051928,Patch1,closed,PeterDee,man.rmd
+274,30043463,Fixed a couple links,closed,PeterDee,git.rmd
+274,30043463,Fixed a couple links,closed,PeterDee,man.rmd
+272,29948765,Small edits,closed,michaelweylandt,check.rmd
+271,29866339,Patch 1,open,taekyunk,git.rmd
+270,29781580,backslash changed to fowardslash,closed,robiRagan,src.rmd
+269,29531325,#267,closed,Ironholds,man.rmd
+268,29383931,Update package.rmd to remove duplication.,closed,iangow,package.rmd
+266,29366504,Remove one explanation of library vs require,closed,hedderik,package.rmd
+265,29363142,Update release.rmd,closed,PhilipPallmann,release.rmd
+264,29362821,Update git.rmd,closed,PhilipPallmann,git.rmd
+263,29362724,Update git.rmd,closed,PhilipPallmann,git.rmd
+262,29362508,Update misc.rmd,closed,PhilipPallmann,misc.rmd
+261,29362391,Update inst.rmd,closed,PhilipPallmann,inst.rmd
+260,29362168,Update data.rmd,closed,PhilipPallmann,data.rmd
+259,29362092,Update namespace.rmd,closed,PhilipPallmann,namespace.rmd
+258,29361719,Update tests.rmd,closed,PhilipPallmann,tests.rmd
+257,29361603,Update man.rmd,closed,PhilipPallmann,man.rmd
+256,29349169,Clarify and simplifiy 'exec' descriptor,closed,Ironholds,misc.rmd
+255,29336928,Fix typo,closed,nareal,description.rmd
+253,29271191,Typos,closed,crtahlin,git.rmd
+252,29149626,"deleted rogue ""can""",closed,ekbrown,git.rmd
+251,29137808,Fixed a minor typo,closed,kikapp,intro.rmd
+250,29111670,Fix typo in package.rmd,closed,andrewpbray,package.rmd
+249,28917202,Update src.rmd,closed,deanbodenham15,src.rmd
+248,28766409,Fixing Typos,closed,jzhaoo,release.rmd
+247,28656983,mostly typo fixes,open,dlukes,man.rmd
+247,28656983,mostly typo fixes,open,dlukes,package.rmd
+246,28534506,Update man.rmd,closed,winterschlaefer,man.rmd
+245,28499516,Update how to specify an exact version of R package,closed,jdblischak,description.rmd
+244,28454959,More typos in obj documentation page,closed,PeterDee,man.rmd
+243,28443516,reorg chapters for pdf,closed,bklamer,book/r-packages.tex
+242,28430064,Update package.rmd to fix regular expression.,closed,iangow,package.rmd
+241,28415322,Fix minor typos,closed,heists,namespace.rmd
+240,28411255,Description page typos,closed,PeterDee,description.rmd
+239,28386841,git.rmd typo corrected,closed,MikeLeonard,git.rmd
+238,28347711,Grammar fix,closed,winterschlaefer,r.rmd
+237,28330420,Minor Typos,closed,PeterDee,r.rmd
+236,28243086,Fixed typos in package structure page,closed,PeterDee,package.rmd
+235,28191162,Fixed several typos in intro,closed,PeterDee,intro.rmd
+234,28139290,'alternative documentation workflow' _will_ show links,closed,benmarwick,man.rmd
+233,27993546,Update check.rmd,closed,LechMadeyski,check.rmd
+232,27918464,Indicate what to do with undocumented methods,closed,lionel-,man.rmd
+231,27914902,missing verb,closed,kwenzig,data.rmd
+230,27886253,Switch anchors around on `notes`,closed,ateucher,package.Rmd
+229,27716053,fixed two typos,closed,tonyfischetti,check.rmd
+229,27716053,fixed two typos,closed,tonyfischetti,misc.rmd
+228,27714686,git username != git config user.name,closed,daattali,git.rmd
+227,27662471,Update description.rmd,closed,nachti,description.rmd
+226,27655960,Package Structure,closed,lindbrook,package.Rmd
+225,27621854,Minor typo corrections,closed,pkimes,tests.rmd
+222,27574038,TYPO: Missing space,closed,HenrikBengtsson,namespace.rmd
+221,27553285,Release,closed,lindbrook,release.rmd
+220,27543927,check: Checks & Travis,open,lindbrook,check.rmd
+217,27412096,fix typos,closed,apomatix,release.rmd
+216,27404458,check: Intro & Workflow,closed,lindbrook,check.rmd
+215,27400343,"git: from ""Synchronising with GitHub"" to end ",closed,lindbrook,git.rmd
+214,27394562,Fix incorrect word in git.rmd,closed,srushe,git.rmd
+213,27394340,Fix incorrect space in tests.rmd,closed,srushe,tests.rmd
+212,27374178,Update vignettes.rmd to explicitely mention the `build_vignettes = TRUE` option.,closed,mattflor,vignettes.rmd
+211,27328224,git:Ignoring files & Undo a mistake,closed,lindbrook,git.rmd
+210,27308908,Add anchors to h2s so that they're not undefined in the navigation.,closed,srushe,git.rmd
+210,27308908,Add anchors to h2s so that they're not undefined in the navigation.,closed,srushe,intro.rmd
+210,27308908,Add anchors to h2s so that they're not undefined in the navigation.,closed,srushe,man.rmd
+210,27308908,Add anchors to h2s so that they're not undefined in the navigation.,closed,srushe,r.rmd
+210,27308908,Add anchors to h2s so that they're not undefined in the navigation.,closed,srushe,src.rmd
+210,27308908,Add anchors to h2s so that they're not undefined in the navigation.,closed,srushe,tests.rmd
+209,27233829,Update formatR link in r.rmd,closed,srushe,r.rmd
+208,27229624,git:Commit best practices line 295,closed,lindbrook,git.rmd
+207,27228631,git:Commit best practices,closed,lindbrook,git.rmd
+206,27212030,Fix typo,closed,stewid,r.rmd
+205,27160105,Fixing typos,closed,stewid,intro.rmd
+202,27136371,git:Record changes,open,lindbrook,git.rmd
+201,27117937,Make navigation width responsive to screen width,closed,daattali,www/highlight.css
+200,27050404,Fixed website from adv-r to r-pkgs,closed,karthik,intro.rmd
+199,26934744,git: Initial set up ... See what's changed,closed,lindbrook,git.rmd
+198,26868609,src:line 477,closed,lindbrook,src.rmd
+197,26868607,git: Guo v. others,closed,lindbrook,git.rmd
+196,26860669,small fixes to vignettes material,closed,jennybc,vignettes.rmd
+195,26801713,Update release.rmd,closed,rmar073,release.rmd
+194,26786716,small typo2,closed,ghost,release.rmd
+193,26784151,minor typos in Release section,closed,davidkane9,release.rmd
+192,26775476,small typo,closed,ghost,release.rmd
+191,26750696,"git:RStudio, Git and GitHub",closed,lindbrook,git.rmd
+190,26705391,minor typos,closed,davidkane9,git.rmd
+190,26705391,minor typos,closed,davidkane9,vignettes.rmd
+189,26633387,git:intro,closed,lindbrook,git.rmd
+188,26600156,Fixing typos,closed,ghost,vignettes.rmd
+187,26600066,Fixing typo,closed,ghost,tests.rmd
+186,26587340,capitalize GitHub,closed,daattali,_includes/package-nav.html
+185,26546813,git: typos,closed,lindbrook,git.rmd
+184,26495513,demo,closed,lindbrook,demo.rmd
+183,26495506,misc,closed,lindbrook,misc.rmd
+182,26440584,Installed Files,open,lindbrook,inst.rmd
+181,26377768,Mostly typos but some minor writing tweaks,closed,davidkane9,git.rmd
+178,26357635,capitalize Git and GitHub,closed,daattali,git.rmd
+177,26352676,src: makefiles...,closed,lindbrook,src.rmd
+176,26329880,Copy Edit,closed,jimhester,git.rmd
+175,26280366,src:makefiles,closed,lindbrook,src.rmd
+174,26273037,Minor text updates,open,alforj,git.rmd
+172,25798941,src:Rinternals.h,closed,lindbrook,src.rmd
+171,25757101,Point out trifle.,closed,uribo,r.rmd
+170,25748912,[fix]Fixed to a newer version,closed,uribo,intro.rmd
+169,25638100,src:Debugging compiled code,closed,lindbrook,src.rmd
+168,25628966,src:C,closed,lindbrook,src.rmd
+167,25620376,Update git.rmd,closed,alforj,git.rmd
+166,25540206,src:c++,closed,lindbrook,src.rmd
+165,25469418,RJava - > rJava,closed,superdesolator,r.rmd
+163,25302138,Fix small typo in man.rmd,closed,jdblischak,man.rmd
+162,25198995,Update git.rmd,closed,earino,git.rmd
+161,25198773,Update src.rmd,closed,earino,src.rmd
+160,25198703,Update man.rmd,closed,earino,man.rmd
+159,25198582,Update style.rmd,closed,earino,style.rmd
+158,25198491,Update to intro.rmd,closed,earino,intro.rmd
+157,25176855,Hulk copyedit,closed,Ironholds,vignettes.rmd
+156,25173392,Fix add_build_ignore to use_build_ignore,closed,daattali,release.rmd
+155,25161057,Fixing typo (Missing word),closed,franrodalg,intro.rmd
+154,25129005,src:compiled code intro,closed,lindbrook,src.rmd
+153,25083580,Update git.rmd,closed,Smudgerville,git.rmd
+152,25048333,Data,closed,lindbrook,data.rmd
+151,24897627,namespace:,closed,lindbrook,namespace.rmd
+149,24859337,Fixing typos,closed,lancelote,src.rmd
+148,24825318,fixing argument for UseMethod,closed,vladpetyuk,man.rmd
+146,24666955,namespace: workflow & exports,closed,lindbrook,namespace.rmd
+145,24542732,Fix typo: s/it/is,closed,robertzk,git.rmd
+144,24542363,"De-dupe the word ""new""",open,robertzk,git.rmd
+143,24538827,Remove comma,closed,robertzk,git.rmd
+142,24538739,Before you what?,closed,robertzk,git.rmd
+141,24538637,"""to"" belongs to this sentence and feels left out",closed,robertzk,git.rmd
+140,24538576,Typo possessive apostrophe,closed,robertzk,git.rmd
+139,24537999,s/see/digest it,closed,robertzk,git.rmd
+138,24537909,Reword sentence about commits,closed,robertzk,git.rmd
+137,24537831,Unsentencefragmentify,closed,robertzk,git.rmd
+136,24537766,s/you both/two people,closed,robertzk,git.rmd
+135,24537693,s/that/than,closed,robertzk,git.rmd
+134,24537397,Remove unnecessary paragraph about commits in this repo,closed,robertzk,git.rmd
+133,24537235,Slight rewording and typo fixes,closed,robertzk,git.rmd
+132,24498395,"Added word ""in""",closed,rmsharp,description.rmd
+131,24494464,Fixed typo,closed,wilkinson,release.rmd
+130,24491042,"Typo: changed ""that"" to ""than""",closed,rmsharp,description.rmd
+129,24486471,"Corrected number in noun ""function""",closed,rmsharp,style.rmd
+128,24480050,Fixed a [possibly intentional] typo,closed,wilkinson,release.rmd
+127,24394332,namespace: The `NAMESPACE`,closed,lindbrook,namespace.rmd
+126,24346531,"namespace: ""::"" operator",closed,lindbrook,namespace.rmd
+125,24266250,Update r.rmd,closed,KJByron,r.rmd
+124,24263458,namespace: Search path,closed,lindbrook,namespace.rmd
+123,24198970,namespace: motivation,closed,lindbrook,namespace.rmd
+122,24129341,Namespaces: intro,closed,lindbrook,namespace.rmd
+121,24110882,lots of little fixes,closed,jennybc,intro.rmd
+120,23983624,Update demo.rmd,closed,phonixor,demo.rmd
+119,23930961,tests: CRAN notes typo,closed,lindbrook,tests.rmd
+118,23886708,tests:Files & CRAN notes,closed,lindbrook,tests.rmd
+117,23873587,tests:tests,closed,lindbrook,tests.rmd
+116,23763384,fix word,closed,renkun-ken,vignettes.rmd
+115,23750598,fix paragraph mistake,closed,renkun-ken,description.rmd
+114,23750386,fix link of MIT license,closed,renkun-ken,description.rmd
+113,23742776,fix typo,closed,renkun-ken,intro.rmd
+112,23736030,Testing: Test workflow,closed,lindbrook,tests.rmd
+111,23666031,"add note on ""pander"" and ""asis""",open,daroczig,vignettes.rmd
+110,23648611,"Update release.rmd - typos, punctuation and language.",closed,michaelmikebuckley,release.rmd
+109,23647999,Update check.rmd - Typos and minor language issues,closed,michaelmikebuckley,check.rmd
+108,23622329,Correcting yaml,closed,jimhester,release.rmd
+107,23585884,Update src.rmd,closed,michaelmikebuckley,src.rmd
+106,23415722,Testing: intro,closed,lindbrook,tests.rmd
+105,23340718,fix anchor on page,closed,ncarchedi,vignettes.rmd
+104,23276843,Update data.rmd,closed,michaelmikebuckley,data.rmd
+103,23271599,Update namespace.rmd - One typo,closed,michaelmikebuckley,namespace.rmd
+102,23236182,Don't cuddle `else`,closed,jimhester,style.rmd
+101,23209328,Various minor issues - See details below,closed,michaelmikebuckley,vignettes.rmd
+100,23207858,Section tags and typos,closed,michaelmikebuckley,vignettes.rmd
+99,23195089,Update man.rmd,closed,michaelmikebuckley,man.rmd
+98,23186580,Clarify spacing for right parentheses.,closed,jimhester,style.rmd
+97,23156514,Update namespace.rmd,closed,adessy,namespace.rmd
+96,23154755,Update namespace.rmd,closed,adessy,namespace.rmd
+95,23154594,Update namespace.rmd,closed,adessy,namespace.rmd
+94,23134630,vignettes: CRAN notes & Where next,closed,lindbrook,vignettes.rmd
+93,23133649,vignettes: advice for writing vignettes,closed,lindbrook,vignettes.rmd
+92,23038705,"demo.Rmd: missing word in ""instead write vignette""",closed,kbroman,demo.Rmd
+91,23033694,Update demo.Rmd,closed,davidkane9,demo.Rmd
+90,23032836,Update demo.Rmd,closed,revodavid,demo.Rmd
+88,22989223,vignettes: knitr,closed,lindbrook,vignettes.rmd
+87,22964338,vignettes: markdown,closed,lindbrook,vignettes.rmd
+86,22940449,vignettes: workflow & metadata,closed,lindbrook,vignettes.rmd
+85,22868998,Update src.rmd,closed,avisser,src.rmd
+84,22868108,Update data.rmd,closed,Holzhauer,data.rmd
+83,22867028,Update vignettes.rmd,closed,Holzhauer,vignettes.rmd
+82,22775784,Fixing typo,closed,heogden,vignettes.rmd
+81,22771208,Package `Title` must be title case,closed,bpbond,description.rmd
+80,22619297,fixed typo,closed,contravariant,data.rmd
+79,22540158,vignettes:intro,closed,lindbrook,vignettes.rmd
+78,22425295,typos,closed,andreaphsz,namespace.rmd
+77,22251611,Documentation: Do repeat yourself...,closed,lindbrook,man.rmd
+76,22186363,Remove unnecessary 'is',closed,jmarshallnz,r.rmd
+75,22177121,"Documentation: functions, datasets, classes",closed,lindbrook,man.rmd
+74,22073645,Minor typo fix,closed,jcainey,data.rmd
+73,22073357,Update tests.rmd,closed,tonybreyal,tests.rmd
+72,22049224,Documentation: Roxygen comments,open,lindbrook,man.rmd
+71,22033369,"Prefer requireNamespace(..., quietly = <TRUE>) ?",closed,kevinushey,namespace.rmd
+70,22022687,Documentation: the documentation workflow,closed,lindbrook,man.rmd
+69,22016775,small wording/type stuff,closed,jennybc,namespace.rmd
+68,21980888,Documentation: intro,closed,lindbrook,man.rmd
+66,21914327,typo fix,closed,jennybc,tests.rmd
+65,21876847,Introduction,open,lindbrook,intro.rmd
+64,21813643,description: Who can use it?...,closed,lindbrook,description.rmd
+63,21758778,description: Who wrote the package?,closed,lindbrook,description.rmd
+62,21735028,Update namespace.rmd,closed,SimonPBiggs,namespace.rmd
+61,21681906,Description: What does the package do?,closed,lindbrook,description.rmd
+60,21625353,Description: Naming your package,closed,lindbrook,description.rmd
+59,21624730,description.rmd:Versioning...,closed,lindbrook,description.rmd
+58,21592589,What does the package need?,closed,lindbrook,description.rmd
+57,21565482,Update vignettes.rmd,closed,federicomarini,vignettes.rmd
+56,21531993,Fixing typo,closed,dgrtwo,release.rmd
+55,21507668,Package metadata: intro,closed,lindbrook,description.rmd
+54,21497447,Fixing typos,closed,zhaoy,intro.rmd
+53,21377539,Fixing grammar/typo,closed,jowalski,man.rmd
+52,21274079,"""T.+ting"" to replace ""t.+ting"" tests.rmd  & check.rmd preferrably->preferably ",closed,superdesolator,tests.rmd
+51,21165575,Update vignettes.rmd,closed,petermeissner,vignettes.rmd
+50,21159551,Update release.rmd,closed,petermeissner,release.rmd
+49,21158843,Update description.rmd,closed,petermeissner,description.rmd
+48,21134275,Package metadata: What does the package need?,closed,lindbrook,description.rmd
+47,21125898,Update style.rmd regarding word separators,closed,kylelundstedt,style.rmd
+46,21000634,R Code: Package installation & What is a library?,closed,lindbrook,r.rmd
+45,20999771,Patch,closed,jacobbien,description.rmd
+44,20994938,Update r.rmd,closed,jacobbien,r.rmd
+43,20994816,Update r.rmd,closed,jacobbien,r.rmd
+42,20990980,Code: What is a package?,closed,lindbrook,r.rmd
+41,20987281,Update r.rmd,closed,gajusmiknaitis,r.rmd
+40,20983066,Update intro.rmd,closed,urmils,intro.rmd
+39,20862403,R code: Getting started...Orgainizing and running,closed,lindbrook,r.rmd
+38,20686232,Introduction: Getting started...,closed,lindbrook,intro.rmd
+36,20547523,Update misc.rmd,closed,manuelreif,misc.rmd
+35,20486138,Update intro.rmd,closed,petermeissner,intro.rmd
+34,20431742,added install instruction for BiocInstaller,closed,singmann,intro.rmd
+31,20379774,Philosophy II,closed,lindbrook,intro.rmd
+30,20321093,src.rmd suggestions,closed,wrathematics,src.rmd
+29,20253096,Deleted extra word in man.rmd,closed,jdblischak,man.rmd
+28,20224596,Introduction: philosophy,closed,lindbrook,intro.rmd
+27,20224360,Introduction: why build a package?,closed,lindbrook,intro.rmd
+26,20126790,Update r.rmd,closed,rmsharp,r.rmd
+25,20121982,Change from .99 to .9xxx version numbers,closed,wch,release.rmd
+24,20082442,added text about case-insensitive file systems and dots in names,closed,maiermarco,style.rmd
+23,20080375,"Fixed a Typo ""Semantic VersionSing""",closed,maiermarco,release.rmd
+21,19983323,Fixed a few minor typos in intro.rmd and r.rmd,closed,aaronwolen,intro.rmd
+21,19983323,Fixed a few minor typos in intro.rmd and r.rmd,closed,aaronwolen,r.rmd
+20,19949679,"Fix typo: ""extdata"" name was missing a ""t""",closed,stephen-frank,data.rmd
+19,19948571,Fix typo,closed,stephen-frank,r.rmd
+18,19917241,Fixing typo.,closed,scharne,man.rmd
+17,19886655,Fix a typo (traivs -> travis).,closed,craigcitro,check.Rmd
+16,19860273,Fixing typo,closed,adrtod,intro.rmd
+15,19828625,Fixing typos,closed,bklamer,r.rmd
+14,19801154,Update r.rmd,closed,Holzhauer,r.rmd
+13,19767032,Fixing typos,closed,bklamer,r.rmd
+12,19702649,Fixing typos,closed,bklamer,release.rmd
+11,19670037,Fixing Typos,closed,ryanatanner,r.rmd
+10,19620611,Fixing typos,closed,bklamer,r.rmd
+7,19565406,Remove extra word from intro.rmd,closed,ZSVG,intro.rmd
+6,19562207,add an exception on space before comma when not refering to columns only...,closed,bquast,style.rmd
+5,19550239,Fix spelling in man.rmd,closed,bklamer,man.rmd
+4,19547005,Add TLD in r.rmd,closed,bklamer,r.rmd
+3,19546431,RStudio spelling in r.rmd,closed,bklamer,r.rmd
+2,19545282,another RStudio consistency,closed,bklamer,intro.rmd
+1,19531250,fix RStudio for consistency,closed,renkun-ken,r.rmd

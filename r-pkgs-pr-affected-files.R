@@ -5,18 +5,15 @@ suppressPackageStartupMessages(library(purrr))
 library(curl)
 suppressPackageStartupMessages(library(readr))
 
+source("map-chr-hack.R")
+source("get-pr-affected-files-from-patch.R")
+
 owner <- "hadley"
 repo <- "r-pkgs"
 pr_list <-
   gh("/repos/:owner/:repo/pulls", owner = owner, repo = repo,
      state = "all", .limit = Inf)
 length(pr_list)
-
-map_chr_hack <- function(.x, .f, ...) {
-  map(.x, .f, ...) %>%
-    map_if(is.null, ~ NA_character_) %>%
-    flatten_chr()
-}
 
 pr_df <- pr_list %>%
 {
@@ -39,28 +36,8 @@ pr_df <- pr_list %>%
 }
 pr_df
 
-jdiff <- function(url) {
-  con <- url %>% curl(open = "r")
-  on.exit(close(con))
-  patch <- con %>% readLines()
-  if (length(patch) < 1) {
-    ## in honor of https://github.com/hadley/r-pkgs/pull/317
-    ## 1 commit but 0 files changed, so no patch file :(
-    return(data_frame(file = character(), diffstuff = character()))
-  }
-  stop  <- grep("file[s]? changed", patch) %>% min() %>% `-`(1)
-  start <- grep(            "^---", patch)
-  ## in honor of https://github.com/hadley/r-pkgs/pull/108
-  ## PR message itself includes the regex "^---" :(
-  start <- start[start < stop] %>% max() %>% `+`(1)
-  patch[start:stop] %>%
-    paste(collapse = "\n") %>%
-    paste0("\n") %>% # force read_delim to see as literal data (vs path)
-    read_delim(delim = "|", col_names = c("file", "diffstuff"))
-}
-
 pr_df <- pr_df %>%
-  mutate(pr_files = patch_url %>% map(jdiff))
+  mutate(pr_files = patch_url %>% map(get_pr_affected_files_from_patch))
 
 pr_df$pr_files %>% map(dim) %>% do.call(rbind, .) %>% apply(2, table)
 pr_df$pr_files[[69]]

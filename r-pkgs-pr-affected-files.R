@@ -40,9 +40,9 @@ pr_df <- pr_list %>%
 pr_df
 
 jdiff <- function(url) {
-  con <- url %>% curl()
+  con <- url %>% curl(open = "r")
+  on.exit(close(con))
   patch <- con %>% readLines()
-  close(con)
   if (length(patch) < 1) {
     ## in honor of https://github.com/hadley/r-pkgs/pull/317
     ## 1 commit but 0 files changed, so no patch file :(

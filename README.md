@@ -69,10 +69,10 @@ issue_list %>%
 #> 2   distributions      5
 #> 3          driver      5
 #> 4        practice      3
-#> 5        urltools      2
-#> 6          primes      1
-#> 7         protein      1
-#> 8      rgeolocate      1
+#> 5      rgeolocate      2
+#> 6        urltools      2
+#> 7          primes      1
+#> 8         protein      1
 #> 9            rope      1
 #> 10       webreadr      1
 #> 11      WikidataR      1
@@ -175,9 +175,9 @@ I'm getting info out of the patch file in a rather icky way, but it works. Here'
 
 ``` r
 jdiff <- function(url) {
-  con <- url %>% curl()
+  con <- url %>% curl(open = "r")
+  on.exit(close(con))
   patch <- con %>% readLines()
-  close(con)
   if (length(patch) < 1) {
     ## in honor of https://github.com/hadley/r-pkgs/pull/317
     ## 1 commit but 0 files changed, so no patch file :(
@@ -202,9 +202,16 @@ pr_df <- pr_df %>%
     mutate(pr_files = patch_url %>% map(jdiff))
 ```
 
-Sanity check the `pr_files` list-column. Do all these data frames have exactly two variables -- `file` and `diffstuff`? What's the distribution of the number of rows? I expect to see that the vast majority of PRs affect exactly 1 file, because there are lots of typo corrections. Let's also look at one list-column element.
+Sanity check the `pr_files` list-column. First, look at an example element. We have one row per file and two variables: `file` and `diffstuff` (currently I do nothing with this but ...). Do all elements of the list-column have exactly two variables? What's the distribution of the number of rows? I expect to see that the vast majority of PRs affect exactly 1 file, because there are lots of typo corrections.
 
 ``` r
+pr_df$pr_files[[69]]
+#> Source: local data frame [2 x 2]
+#> 
+#>          file     diffstuff
+#>         (chr)         (chr)
+#> 1     man.rmd 10 +++++-----
+#> 2 package.rmd        4 ++--
 pr_df$pr_files %>% map(dim) %>% do.call(rbind, .) %>% apply(2, table)
 #> [[1]]
 #> 
@@ -215,16 +222,9 @@ pr_df$pr_files %>% map(dim) %>% do.call(rbind, .) %>% apply(2, table)
 #> 
 #>   2 
 #> 295
-pr_df$pr_files[[69]]
-#> Source: local data frame [2 x 2]
-#> 
-#>          file     diffstuff
-#>         (chr)         (chr)
-#> 1     man.rmd 10 +++++-----
-#> 2 package.rmd        4 ++--
 ```
 
-Simplify the list-column elements from data frame to character vector. Then use `tidyr::unnest()` to "explode" things, i.e. give each element its own row. Each element here is a file modified in a PR.
+Simplify the list-column elements from data frame to character vector. Then use `tidyr::unnest()` to "explode" things, i.e. give each element its own row. Each row is now a file modified in a PR.
 
 ``` r
 nrow(pr_df)
@@ -278,6 +278,7 @@ devtools::session_info()
 #> Packages ------------------------------------------------------------------
 #>  package    * version    date       source                       
 #>  assertthat   0.1        2013-12-06 CRAN (R 3.2.0)               
+#>  codetools    0.2-14     2015-07-15 CRAN (R 3.2.2)               
 #>  curl       * 0.9.3      2015-08-25 CRAN (R 3.2.0)               
 #>  DBI          0.3.1      2014-09-24 CRAN (R 3.2.0)               
 #>  devtools     1.9.1.9000 2015-11-16 local                        

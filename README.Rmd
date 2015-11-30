@@ -60,7 +60,7 @@ str(repo_names)
 
 Now we retrieve the issues for all of these repositories. Again, we use a map function, in this case to provide vectorization for `gh()`. We use a new shortcut this time: the `~` formula syntax creates an anonymous function on-the-fly, where `.x` stands for "the input".
 
-```{r cache = TRUE}
+```{r oliver-issues, cache = TRUE}
 issue_list <- repo_names %>% 
   map(~ gh(repo = .x, endpoint = "/repos/ironholds/:repo/issues", .limit = Inf))
 ```
@@ -79,7 +79,6 @@ issue_list %>%
 ```
 
 Similar code is available as a [gist](https://gist.github.com/jennybc/092938a2e2b5fb7d27c5) and [in this repo](open-issue-count-by-repo.R).
-
 
 ### Pull requests on a repo
 
@@ -154,9 +153,9 @@ I'm getting info out of the patch file in a rather icky way, but it works. Here'
 
 ```{r}
 jdiff <- function(url) {
-  con <- url %>% curl()
+  con <- url %>% curl(open = "r")
+  on.exit(close(con))
   patch <- con %>% readLines()
-  close(con)
   if (length(patch) < 1) {
     ## in honor of https://github.com/hadley/r-pkgs/pull/317
     ## 1 commit but 0 files changed, so no patch file :(
@@ -181,14 +180,14 @@ pr_df <- pr_df %>%
     mutate(pr_files = patch_url %>% map(jdiff))
 ```
 
-Sanity check the `pr_files` list-column. Do all these data frames have exactly two variables -- `file` and `diffstuff`? What's the distribution of the number of rows? I expect to see that the vast majority of PRs affect exactly 1 file, because there are lots of typo corrections. Let's also look at one list-column element.
+Sanity check the `pr_files` list-column. First, look at an example element. We have one row per file and two variables: `file` and `diffstuff` (currently I do nothing with this but ...). Do all elements of the list-column have exactly two variables? What's the distribution of the number of rows? I expect to see that the vast majority of PRs affect exactly 1 file, because there are lots of typo corrections. 
 
 ```{r}
-pr_df$pr_files %>% map(dim) %>% do.call(rbind, .) %>% apply(2, table)
 pr_df$pr_files[[69]]
+pr_df$pr_files %>% map(dim) %>% do.call(rbind, .) %>% apply(2, table)
 ```
 
-Simplify the list-column elements from data frame to character vector. Then use `tidyr::unnest()` to "explode" things, i.e. give each element its own row. Each element here is a file modified in a PR.
+Simplify the list-column elements from data frame to character vector. Then use `tidyr::unnest()` to "explode" things, i.e. give each element its own row. Each row is now a file modified in a PR.
 
 ```{r}
 nrow(pr_df)

@@ -248,7 +248,11 @@ This is the ready-to-analyze data re: are earlier chapters the target of more PR
 
 The code up til this point can be found in [r-pkgs-pr-affected-files.R](r-pkgs-pr-affected-files.R).
 
-Here's a figure depicting how often each chapter has been the target of a pull request. The script to do this is here.
+Here's a figure depicting how often each chapter has been the target of a pull request. I'm not adjusting for length of the chapter or anything, so take it with a huge grain of salt. But no obvious evidence that people read and edit the earlier chapters more. We like to make suggestions about Git apparently!.
+
+![](r-pkgs-pr-affected-files-barchart.png)
+
+The script to make the figure is here: [r-pkgs-pr-affected-files-figs.R](r-pkgs-pr-affected-files-figs.R).
 
 ### Issue threads
 
@@ -270,11 +274,10 @@ devtools::session_info()
 #>  language (EN)                        
 #>  collate  en_CA.UTF-8                 
 #>  tz       America/Vancouver           
-#>  date     2015-11-29
+#>  date     2015-11-30
 #> Packages ------------------------------------------------------------------
 #>  package    * version    date       source                       
 #>  assertthat   0.1        2013-12-06 CRAN (R 3.2.0)               
-#>  codetools    0.2-14     2015-07-15 CRAN (R 3.2.2)               
 #>  curl       * 0.9.3      2015-08-25 CRAN (R 3.2.0)               
 #>  DBI          0.3.1      2014-09-24 CRAN (R 3.2.0)               
 #>  devtools     1.9.1.9000 2015-11-16 local                        

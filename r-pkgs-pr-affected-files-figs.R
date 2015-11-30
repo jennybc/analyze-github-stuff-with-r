@@ -44,7 +44,7 @@ setdiff(obs_targets, chapters)
 ## chapter table suitable for join
 ch_df <- data_frame(
   pr_files = c(chapters, "meta"),
-  ch_fact = factor(pr_files, levels = c("meta", rev(chapters)))
+  ch_fact = factor(pr_files, levels = rev(pr_files))
   )
 
 foo <- pr_df %>%

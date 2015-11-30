@@ -29,7 +29,7 @@ Three motivating examples, where I marshal data from the GitHub API using the ex
     
     I mean, how many people really stick with "A Brief History of Time" to the bitter end? I was reading through Hadley Wickham's [Advanced R](http://adv-r.had.co.nz) when I read Jordan's article and wondered ... how many people read this entire book? Or do they start and sort of fizzle out? So I wanted to look at the distribution of pull requests. Are they evenly distributed throughout the book or do they cluster in the early chapters?
     
-This is a glorified note-to-self. It might be interesting a few other people. But I presume a lot of experience with R and a full-on embrace of `%>%`, `dplyr`, etc.
+This is a glorified note-to-self. It might be interesting to a few other people. But I presume a lot of experience with R and a full-on embrace of `%>%`, `dplyr`, etc.
 
   * [Oliver's open issues](#olivers-open-issues)
   * [Pull requests on a repo](#pull-requests-on-a-repo)
@@ -96,7 +96,7 @@ library(curl)
 suppressPackageStartupMessages(library(readr))
 ```
 
-Use `gh()` to retrieve all pull requests on ["hadley/r-pkgs"](https://github.com/hadley/r-pkgs).
+Use `gh()` to retrieve all pull requests on [`hadley/r-pkgs`](https://github.com/hadley/r-pkgs).
 
 ```{r pr-list, cache = TRUE}
 owner <- "hadley"

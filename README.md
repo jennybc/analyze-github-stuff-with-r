@@ -60,7 +60,7 @@ str(iss_df, max.level = 1)
 #>  $ issue:List of 48
 ```
 
-Create a decent display of how many open issue there are on each repo. I use `map_int()` to count the open issues for each repo and standard `dplyr` verbs to select, filter, and arrange. I'm not even bothering with `knitr::kable()` here because these experiments are definitely not about presentation.
+Create a decent display of how many open issues there are on each repo. I use `map_int()` to count the open issues for each repo and then standard `dplyr` verbs to select, filter, and arrange. I'm not even bothering with `knitr::kable()` here because these experiments are definitely not about presentation.
 
 ``` r
 iss_df %>%
@@ -247,7 +247,7 @@ Recap of files related to PRs on R Packages
 
 I went through the same steps with all pull requests on [`hadley/adv-r`](https://github.com/hadley/adv-r), the repository for [Advanced R](http://adv-r.had.co.nz).
 
-Here's the same figure as above but for Advanced R. There's a stronger case for earlier chapters being targetted with PRs more often. ¯\_(ツ)\_/¯
+Here's the same figure as above but for Advanced R. There's a stronger case for earlier chapters being targeted with PRs more often.
 
 ![](adv-r-pr-affected-files-barchart.png)
 
@@ -260,7 +260,247 @@ Recap of files related to PRs on Advanced R:
 
 ### Issue threads
 
-*bring some suitably redacted version of this over*
+[STAT 545](http://stat545-ubc.github.io) has a public Discussion repo, where we use the issues as a discussion board. I want to look at the posts there, as something related to student engagement that I can actually quantify.
+
+This starts out fairly similar to the previous example: I retrieve all issues that have been modified since September 1, 2015.
+
+``` r
+owner <- "STAT545-UBC"
+repo <- "Discussion"
+
+issue_list <-
+  gh("/repos/:owner/:repo/issues", owner = owner, repo = repo,
+     state = "all", since = "2015-09-01T00:00:00Z", .limit = Inf)
+(n_iss <- length(issue_list))
+#> [1] 212
+```
+
+This retrieves 212 issues. I use this list to create a conventional data frame with one row per issue.
+
+``` r
+issue_df <- issue_list %>%
+{
+  data_frame(number = map_int(., "number"),
+             id = map_int(., "id"),
+             title = map_chr(., "title"),
+             state = map_chr(., "state"),
+             n_comments = map_int(., "comments"),
+             opener = map_chr(., c("user", "login")),
+             created_at = map_chr(., "created_at") %>% as.Date())
+}
+issue_df
+#> Source: local data frame [212 x 7]
+#> 
+#>    number        id                                        title  state
+#>     (int)     (int)                                        (chr)  (chr)
+#> 1     276 119601582 Creating PDFs via latex in command line/make   open
+#> 2     275 119272439                   general makefile confusion closed
+#> 3     274 119262468                     do is dropping countries closed
+#> 4     273 119259601        linear regression within each country closed
+#> 5     272 119257920                       adding another column? closed
+#> 6     271 119252407               how to add the residual error? closed
+#> 7     270 119236992                        Pandoc error solution   open
+#> 8     269 119230359                             how many scripts closed
+#> 9     268 119133218          Can't download packages from github   open
+#> 10    267 119112488                          using gapminder.tsv closed
+#> ..    ...       ...                                          ...    ...
+#> Variables not shown: n_comments (int), opener (chr), created_at (date).
+```
+
+It turns out some of these issues were created during the 2014 run but show up here because I closed them in early September. Get rid of them.
+
+``` r
+issue_df <- issue_df %>%
+  filter(created_at >= "2015-09-01T00:00:00Z")
+(n_iss <- nrow(issue_df))
+#> [1] 192
+```
+
+Down to 192 issues.
+
+My ultimate goal is a data frame with one row per issue comment, but it's harder than you expect to get there. Each issue should be represented by at least one row and many will have several rows, as there are typically follow up comments.
+
+I need to loop over the issues and retrieve the follow up comments. I mean that literally -- the [Issue Comment endpoint](https://developer.github.com/v3/issues/comments/) does not return a comment for the opening of the issue. This makes for a little extra data manipulation ... and more practice with `purrr` and `dplyr`!
+
+Make a data frame of issue "opens" with a set of variables chosen for maximum bliss in future binds and joins. The `i` variable records comment position within the thread.
+
+``` r
+opens <- issue_df %>%
+  select(number, who = opener) %>%
+  mutate(i = 0L)
+opens
+#> Source: local data frame [192 x 3]
+#> 
+#>    number             who     i
+#>     (int)           (chr) (int)
+#> 1     276      samhinshaw     0
+#> 2     275 molliejmcdowell     0
+#> 3     274 molliejmcdowell     0
+#> 4     273 molliejmcdowell     0
+#> 5     272        bdacunha     0
+#> 6     271        bdacunha     0
+#> 7     270          zhamel     0
+#> 8     269 molliejmcdowell     0
+#> 9     268         wang114     0
+#> 10    267        bdacunha     0
+#> ..    ...             ...   ...
+nrow(opens)
+#> [1] 192
+```
+
+Make a data frame of issue follow up comments. At first, this has to hold an unfriendly list-column `res` where I dump issue comments as returned by the API.
+
+``` r
+comments <- issue_df %>%
+  select(number) %>%
+  mutate(res = number %>% map(
+    ~ gh(number = .x,
+         endpoint = "/repos/:owner/:repo/issues/:number/comments",
+         owner = owner, repo = repo, .limit = Inf)))
+str(comments, max.level = 1)
+#> Classes 'tbl_df', 'tbl' and 'data.frame':    192 obs. of  2 variables:
+#>  $ number: int  276 275 274 273 272 271 270 269 268 267 ...
+#>  $ res   :List of 192
+#>   .. [list output truncated]
+```
+
+What is the `res` variable? A list-column of length 192, each component of which is another list of comments, each of which is also a nested list. Here's a look at 3 elements corresponding to issues that generated anywhere from no discussion to lots of discussion.
+
+``` r
+comments %>%
+  filter(number %in% c(276, 275, 272)) %>%
+  select(res) %>%
+  walk(str, max.level = 2, give.attr = FALSE)
+#> List of 3
+#>  $ : list()
+#>  $ :List of 2
+#>   ..$ :List of 8
+#>   ..$ :List of 8
+#>  $ :List of 6
+#>   ..$ :List of 8
+#>   ..$ :List of 8
+#>   ..$ :List of 8
+#>   ..$ :List of 8
+#>   ..$ :List of 8
+#>   ..$ :List of 8
+```
+
+All I really want to know is *who* made the comment, so I mutate `res` into `who` using `map_chr()` and a character vector as extractor function. I also have to use `at_depth()` to push the mapping one level down in the `res` nested list. I can drop the nasty `res` variable and revisit the same threads above to show how much simpler things have gotten.
+
+``` r
+comments <- comments %>%
+  mutate(who = res %>% at_depth(1, map_chr, c("user", "login"))) %>%
+  select(-res)
+comments %>%
+  filter(number %in% c(276, 275, 272))
+#> Source: local data frame [3 x 2]
+#> 
+#>   number      who
+#>    (int)   (list)
+#> 1    276 <chr[0]>
+#> 2    275 <chr[2]>
+#> 3    272 <chr[6]>
+```
+
+Use `tidyr::unnest()` to "explode" the `who` list-column and get one row per follow up comment. I now add the `i` variable for numbering within the thread.
+
+``` r
+comments <- comments %>%
+  unnest(who) %>%
+  group_by(number) %>%
+  mutate(i = row_number(number)) %>%
+  ungroup()
+comments
+#> Source: local data frame [863 x 3]
+#> 
+#>    number             who     i
+#>     (int)           (chr) (int)
+#> 1     275         jennybc     1
+#> 2     275 molliejmcdowell     2
+#> 3     274          ksamuk     1
+#> 4     274 molliejmcdowell     2
+#> 5     272         jennybc     1
+#> 6     272         jennybc     2
+#> 7     272        bdacunha     3
+#> 8     272         jennybc     4
+#> 9     272         jennybc     5
+#> 10    272        bdacunha     6
+#> ..    ...             ...   ...
+```
+
+No more list-columns!
+
+It's time for a sanity check. Do the empirical counts of follow up comments match the number of comments initially reported by the API?
+
+``` r
+count_empirical <- comments %>%
+  count(number)
+count_stated <- issue_df %>%
+  select(number, stated = n_comments)
+checker <- left_join(count_empirical, count_stated)
+#> Joining by: "number"
+with(checker, n == stated) %>% all() # hopefully TRUE
+#> [1] TRUE
+```
+
+I row bind issue "opens" and follow up comments, feeling very smug that that they have exactly the same variables, though it is no accident.
+
+``` r
+atoms <- bind_rows(opens, comments)
+```
+
+Join back to the original data frame of issues, since that still holds issue title, state and creation date. It is intentional that the `number` variable has been set up as the natural `by` variable.
+
+``` r
+finally <- atoms %>%
+  left_join(issue_df) %>%
+  select(number, id, opener, who, i, everything()) %>%
+  arrange(desc(number), i)
+#> Joining by: "number"
+```
+
+A quick look at this and ... we're ready for analysis. Our work here is done.
+
+``` r
+finally
+#> Source: local data frame [1,055 x 9]
+#> 
+#>    number        id          opener             who     i
+#>     (int)     (int)           (chr)           (chr) (int)
+#> 1     276 119601582      samhinshaw      samhinshaw     0
+#> 2     275 119272439 molliejmcdowell molliejmcdowell     0
+#> 3     275 119272439 molliejmcdowell         jennybc     1
+#> 4     275 119272439 molliejmcdowell molliejmcdowell     2
+#> 5     274 119262468 molliejmcdowell molliejmcdowell     0
+#> 6     274 119262468 molliejmcdowell          ksamuk     1
+#> 7     274 119262468 molliejmcdowell molliejmcdowell     2
+#> 8     273 119259601 molliejmcdowell molliejmcdowell     0
+#> 9     272 119257920        bdacunha        bdacunha     0
+#> 10    272 119257920        bdacunha         jennybc     1
+#> ..    ...       ...             ...             ...   ...
+#> Variables not shown: title (chr), state (chr), n_comments (int),
+#>   created_at (date).
+finally %>%
+  count(who, sort = TRUE)
+#> Source: local data frame [71 x 2]
+#> 
+#>            who     n
+#>          (chr) (int)
+#> 1      jennybc   311
+#> 2     ahippman    63
+#> 3  cathyxijuan    49
+#> 4     daattali    48
+#> 5       ksamuk    47
+#> 6     bdacunha    42
+#> 7      LinaQiu    24
+#> 8     mstrimas    23
+#> 9         npjc    22
+#> 10      sho-87    22
+#> ..         ...   ...
+#write_csv(finally, "stat545-discussion-threads.csv")
+```
+
+A clean script for this example is in [stat545-discussion-threads.R](stat545-discussion-threads.R).
 
 ------------------------------------------------------------------------
 

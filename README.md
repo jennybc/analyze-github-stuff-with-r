@@ -33,34 +33,42 @@ suppressPackageStartupMessages(library(dplyr))
 suppressPackageStartupMessages(library(purrr))
 ```
 
-Use `gh()` to retrieve all of Oliver's public GitHub repositories. Use `map_chr()` from `purrr` to extract all elements named `name` from the resulting list. The map functions are much like base `lapply()` or `vapply()`. There is a lot of flexibility around how to specify the function to apply over the input list. Here I use a shortcut: the character vector `"name"` is converted into an extractor function.
+Use `gh()` to retrieve all of Oliver's public GitHub repositories.
 
 ``` r
 repos <- gh("/users/ironholds/repos", .limit = Inf)
-repo_names <- repos %>% 
-  map_chr("name")
-str(repo_names)
-#>  chr [1:48] "arin" "averageimage" "batman" "billund" "ccc" ...
+length(repos)
+#> [1] 48
 ```
 
-Now we retrieve the issues for all of these repositories. Again, we use a map function, in this case to provide vectorization for `gh()`. We use a new shortcut this time: the `~` formula syntax creates an anonymous function on-the-fly, where `.x` stands for "the input".
+Create a data frame with one row per repo and two variables.
+
+-   `repo` = repository name. Use `purrr::map_chr()` to extract all elements named `name` from the repository list. The map functions are much like base `lapply()` or `vapply()`. There is a lot of flexibility around how to specify the function to apply over the input list. Here I use a shortcut: the character vector `"name"` is converted into an extractor function.
+-   `issue` = list-column of the issues for each repository. Again, I use a map function, in this case to provide vectorization for `gh()`. I use a different shortcut: the `~` formula syntax creates an anonymous function on-the-fly, where `.x` stands for "the input".
 
 ``` r
-issue_list <- repo_names %>% 
-  map(~ gh(repo = .x, endpoint = "/repos/ironholds/:repo/issues", .limit = Inf))
+iss_df <-
+  data_frame(
+    repo = repos %>% map_chr("name"),
+    issue = repo %>%
+      map(~ gh(repo = .x, endpoint = "/repos/ironholds/:repo/issues",
+               .limit = Inf))
+    )
+str(iss_df, max.level = 1)
+#> Classes 'tbl_df', 'tbl' and 'data.frame':    48 obs. of  2 variables:
+#>  $ repo : chr  "arin" "averageimage" "batman" "billund" ...
+#>  $ issue:List of 48
 ```
 
-Finally, we put this in a sorted, tabulated data frame for a decent display of how many open issue there are on each repo. I'm not even bothering with `knitr::kable()` here because these experiments are definitely not about presentation.
+Create a decent display of how many open issue there are on each repo. I use `map_int()` to count the open issues for each repo and standard `dplyr` verbs to select, filter, and arrange. I'm not even bothering with `knitr::kable()` here because these experiments are definitely not about presentation.
 
 ``` r
-issue_list %>% 
-{
-  data_frame(repo = repo_names,
-             n_open = map_int(., length))
-} %>% 
-  arrange(desc(n_open)) %>% 
-  filter(n_open > 0) %>% 
-  print(n = length(repo_names))
+iss_df %>%
+  mutate(n_open = issue %>% map_int(length)) %>%
+  select(-issue) %>%
+  filter(n_open > 0) %>%
+  arrange(desc(n_open)) %>%
+  print(n = nrow(.))
 #> Source: local data frame [13 x 2]
 #> 
 #>              repo n_open
@@ -80,7 +88,7 @@ issue_list %>%
 #> 13            wmf      1
 ```
 
-Similar code is available as a [gist](https://gist.github.com/jennybc/092938a2e2b5fb7d27c5) and [in this repo](open-issue-count-by-repo.R).
+A clean script for this is available in [open-issue-count-by-repo.R](open-issue-count-by-repo.R).
 
 ### Pull requests on a repo
 

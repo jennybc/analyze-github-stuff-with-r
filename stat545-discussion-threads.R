@@ -11,7 +11,7 @@ issue_list <-
   gh("/repos/:owner/:repo/issues", owner = owner, repo = repo,
      state = "all", since = "2015-09-01T00:00:00Z", .limit = Inf)
 
-length(issue_list) #212
+length(issue_list) #213
 str(issue_list[[100]])
 
 issue_df <- issue_list %>%
@@ -40,7 +40,7 @@ opens <- issue_df %>%
 opens
 nrow(opens)
 
-## get the comments
+## get the comments: option 1
 comments <- issue_df %>%
   select(number) %>%
   mutate(res = number %>% map(
@@ -50,7 +50,7 @@ comments <- issue_df %>%
 str(comments, max.level = 1)
 
 comments %>%
-  filter(number %in% c(276, 275, 272)) %>%
+  filter(number %in% c(275, 273, 272)) %>%
   select(res) %>%
   walk(str, max.level = 2, give.attr = FALSE)
 
@@ -58,7 +58,37 @@ comments <- comments %>%
   mutate(who = res %>% at_depth(1, map_chr, c("user", "login"))) %>%
   select(-res)
 comments %>%
-  filter(number %in% c(276, 275, 272))
+  filter(number %in% c(275, 273, 272))
+
+## sidebar: exploring other ways to wrangle the comments ...
+
+## get the comments: option 2 (from hadley)
+## Not sure I like it. It's a bit simpler, but number gets coerced into a
+## character, which is inelegant/troubling.
+# comments <- issue_df$number %>%
+#   map(~ gh(number = .x,
+#            endpoint = "/repos/:owner/:repo/issues/:number/comments",
+#            owner = owner, repo = repo, .limit = Inf)
+#   ) %>%
+#   set_names(issue_df$number)
+# comments %>%
+#   map(. %>% map_chr(c("user", "login"))) %>%
+#   map_df(~ data_frame(who = ., i = seq_along(.)), .id = "number")
+
+## get the comments: option 3 (from hadley)
+## This almost works:
+# issue_df_alt <- issue_df %>% mutate(
+#   comments = map(number,
+#                  ~ gh(number = .x,
+#                       endpoint = "/repos/:owner/:repo/issues/:number/comments",
+#                       owner = owner, repo = repo, .limit = Inf))
+# )
+# issue_df_alt %>%
+#   mutate(who = comments %>% map(. %>% map_chr(c("user", "login")))) %>%
+#   do(map_df(.$who, ~ data_frame(who = ., i = seq_along(.))))
+## but we've lost number :(
+
+## END sidebar
 
 comments <- comments %>%
   unnest(who) %>%

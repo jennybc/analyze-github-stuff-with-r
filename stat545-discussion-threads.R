@@ -11,7 +11,7 @@ issue_list <-
   gh("/repos/:owner/:repo/issues", owner = owner, repo = repo,
      state = "all", since = "2015-09-01T00:00:00Z", .limit = Inf)
 
-length(issue_list) #213
+length(issue_list) #215
 str(issue_list[[100]])
 
 issue_df <- issue_list %>%
@@ -55,7 +55,8 @@ comments %>%
   walk(str, max.level = 2, give.attr = FALSE)
 
 comments <- comments %>%
-  mutate(who = res %>% at_depth(1, map_chr, c("user", "login"))) %>%
+#  mutate(who = res %>% at_depth(1, map_chr, c("user", "login"))) %>%
+  mutate(who = res %>% map(. %>% map_chr(c("user", "login")))) %>%
   select(-res)
 comments %>%
   filter(number %in% c(275, 273, 272))

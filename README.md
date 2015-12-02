@@ -368,14 +368,14 @@ What is the `res` variable? A list-column of length 192, each component of which
 
 ``` r
 comments %>%
-  filter(number %in% c(276, 275, 272)) %>%
+  filter(number %in% c(275, 273, 272)) %>%
   select(res) %>%
   walk(str, max.level = 2, give.attr = FALSE)
 #> List of 3
-#>  $ : list()
 #>  $ :List of 2
 #>   ..$ :List of 8
 #>   ..$ :List of 8
+#>  $ : list()
 #>  $ :List of 6
 #>   ..$ :List of 8
 #>   ..$ :List of 8
@@ -385,20 +385,20 @@ comments %>%
 #>   ..$ :List of 8
 ```
 
-All I really want to know is *who* made the comment, so I mutate `res` into `who` using `map_chr()` and a character vector as extractor function. I also have to use `at_depth()` to push the mapping one level down in the `res` nested list. I can drop the nasty `res` variable and revisit the same threads above to show how much simpler things have gotten.
+All I really want to know is *who* made the comment, so I mutate `res` into `who` using `map_chr()` and a character vector as extractor function. Push this one level down in the `res` nested list. I can drop the nasty `res` variable and revisit the same threads above to show how much simpler things have gotten.
 
 ``` r
 comments <- comments %>%
-  mutate(who = res %>% at_depth(1, map_chr, c("user", "login"))) %>%
+  mutate(who = res %>% map(. %>% map_chr(c("user", "login")))) %>%
   select(-res)
 comments %>%
-  filter(number %in% c(276, 275, 272))
+  filter(number %in% c(275, 273, 272))
 #> Source: local data frame [3 x 2]
 #> 
 #>   number      who
 #>    (int)   (list)
-#> 1    276 <chr[0]>
-#> 2    275 <chr[2]>
+#> 1    275 <chr[2]>
+#> 2    273 <chr[0]>
 #> 3    272 <chr[6]>
 ```
 
@@ -518,7 +518,7 @@ devtools::session_info()
 #>  language (EN)                        
 #>  collate  en_CA.UTF-8                 
 #>  tz       America/Vancouver           
-#>  date     2015-11-30
+#>  date     2015-12-01
 #> Packages ------------------------------------------------------------------
 #>  package    * version    date       source                       
 #>  assertthat   0.1        2013-12-06 CRAN (R 3.2.0)               

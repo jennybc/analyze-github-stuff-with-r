@@ -289,19 +289,19 @@ What is the `res` variable? A list-column of length `r n_iss`, each component of
 
 ```{r}
 comments %>%
-  filter(number %in% c(276, 275, 272)) %>%
+  filter(number %in% c(275, 273, 272)) %>%
   select(res) %>%
   walk(str, max.level = 2, give.attr = FALSE)
 ```
 
-All I really want to know is *who* made the comment, so I mutate `res` into `who` using `map_chr()` and a character vector as extractor function. I also have to use `at_depth()` to push the mapping one level down in the `res` nested list. I can drop the nasty `res` variable and revisit the same threads above to show how much simpler things have gotten.
+All I really want to know is *who* made the comment, so I mutate `res` into `who` using `map_chr()` and a character vector as extractor function. Push this one level down in the `res` nested list. I can drop the nasty `res` variable and revisit the same threads above to show how much simpler things have gotten.
 
 ```{r}
 comments <- comments %>%
-  mutate(who = res %>% at_depth(1, map_chr, c("user", "login"))) %>%
+  mutate(who = res %>% map(. %>% map_chr(c("user", "login")))) %>%
   select(-res)
 comments %>%
-  filter(number %in% c(276, 275, 272))
+  filter(number %in% c(275, 273, 272))
 ```
 
 Use `tidyr::unnest()` to "explode" the `who` list-column and get one row per follow up comment. I now add the `i` variable for numbering within the thread.
